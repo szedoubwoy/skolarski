@@ -294,9 +294,18 @@ a:focus, a:hover, a:visited {
         margin-bottom: 20px; } }
 
 .media-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
   background: url("../images/gallery/gallery_5.JPG"); }
   .media-section h2 {
     color: #dcdcdc; }
+  .media-section h5 {
+    font-size: 32px;
+    color: #151515;
+    transition: .2s ease-in-out;
+    height: 35px; }
+    .media-section h5:hover {
+      color: #626262; }
 
 .news-section p {
   color: #909090; }
