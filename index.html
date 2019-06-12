@@ -24,53 +24,53 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <div class="navbar_left">
-                            <li class="nav-item active" onclick="$('#home').animatescroll();">
+                            <li class="nav-item active" onclick="$('#home').animatescroll({scrollSpeed:1900});">
                                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                   <li class="nav-item dropdown">
-                                          <a class="nav-link dropdown-toggle" href="#" onclick="$('#about').animatescroll({padding: 100});" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <a class="nav-link dropdown-toggle" href="#" onclick="$('#about').animatescroll({padding: 100, scrollSpeed:1900});" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                               About Me
                                           </a>
                                           <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll();">Bio</a>
-                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll();">Recommendations</a>
-                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll();">Selected reviews</a>
-                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll();">Texts</a>   
+                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll({scrollSpeed:1900});">Bio</a>
+                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll({scrollSpeed:1900});">Recommendations</a>
+                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll({scrollSpeed:1900});">Selected reviews</a>
+                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll({scrollSpeed:1900});">Texts</a>   
+                                          </div>
                                   </li>
-                                  <li class="nav-item" onclick="$('#recordings').animatescroll({padding: 60});">
+                                  <li class="nav-item" onclick="$('#recordings').animatescroll({padding: 60, scrollSpeed:1900});">
                                       <a class="nav-link" href="#">Recordings</a>
                                   </li>
-                                  <li class="nav-item" onclick="$('#gallery').animatescroll({padding:60});">
+                                  <li class="nav-item" onclick="$('#gallery').animatescroll({padding:60, scrollSpeed:1900});">
                                       <a class="nav-link" href="#">Gallery</a>
                                   </li>
                     </div>
                 </ul>
                     
-                      <a class="navbar-brand mx-auto" href="#">
+                <a class="navbar-brand mx-auto" href="#">
                         <!-- <img src="images/logo.png" class="" width="180" height="45" alt=""> -->
-                       <h1>KONRAD SKOLARSKI</h1> 
-                    </a>
+                    <h1>KONRAD SKOLARSKI</h1> 
+                </a>
 
                     <ul class="navbar-nav mr-auto">
-                    <div class="navbar_right">
-                            <li class="nav-item" onclick="$('#media').animatescroll({padding:80});">
+                        <div class="navbar_right">
+                            <li class="nav-item" onclick="$('#media').animatescroll({padding:80, scrollSpeed:1900});">
                                     <a class="nav-link" href="#">Media</a>
                                 </li>
-                                <li class="nav-item" onclick="$('#news').animatescroll({padding:80});">
+                                <li class="nav-item" onclick="$('#news').animatescroll({padding:80, scrollSpeed:1900});">
                                     <a class="nav-link" href="#">News</a>
                                 </li>
-                                <li class="nav-item" onclick="$('#downloads').animatescroll();">
+                                <li class="nav-item" onclick="$('#downloads').animatescroll({scrollSpeed:2000});">
                                     <a class="nav-link" href="#">Download</a>
                                 </li>
-                                <li class="nav-item" onclick="$('#contact').animatescroll();">
+                                <li class="nav-item" onclick="$('#contact').animatescroll({padding:-40, scrollSpeed:1900});">
                                     <a class="nav-link" href="#">Contact</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="nav-item ">
                                     <a class="nav-link" href="https://www.youtube.com/channel/UCuEHqcBxZW_XpQp_xBV3uag" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
                                 </li>
-                    </div>
-                      
-                </ul>  
+                        </div>     
+                    </ul>  
             </div>
             </nav>
           <div class="hero text-center">
@@ -105,7 +105,7 @@
             </div>
   </header>
 
-  <div class="about-me-section" id="about">
+  <div class="about-me-section ptb-100" id="about">
         <div class="container text-justify">
             <h2 class="section-title text-center">About Konrad</h2>
             <div class="title-line"></div>
@@ -236,7 +236,7 @@
 
   <div class="next-section"></div>
 
-  <div class="recordings-section" id="recordings">
+  <div class="recordings-section ptb-100" id="recordings">
         <div class="container">
             <h2 class="section-title text-center">Recordings</h2>
             <div class="recordings-wrapper">
@@ -283,7 +283,7 @@
         </div> 
  </div>
 
- <div class="gallery-section pt-5 pb-5" id="gallery">
+ <div class="gallery-section ptb-100" id="gallery">
     <div class="container">
             <h2 class="section-title text-center pb-5">Gallery</h2>
             <div class="gallery-wrapper">
@@ -437,24 +437,26 @@
  </div>
 
 
- <div class="media-section" id="media">
+ <div class="media-section ptb-100" id="media">
         <div class="container">
+            <div class="text-title-wrapper">
                 <div class="row">
-                    <div class="col-md-8">
-                        <h2 class="section-title pb-5 text-left">Media</h2>
+                    <div class="col-md-8 col-sm-12">
+                        <h2 class="section-title text-md-left text-center">Media</h2>
                     </div>
-                    <div class="col-md-4 text-md-right text-sm-left">
-                        <a href="#"><h5 class="section-title pb-5 text-right">All Videos</h5></a>
+                    <div class="col-md-4 col-sm-12">
+                        <a href="#"><h5 class="section-title text-md-right text-center">All Videos</h5></a>
                     </div>
                 </div>
+            </div>
             
                 <div class="embed-responsive embed-responsive-16by9 rounded">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/0zxqXMSG4xI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0zxqXMSG4xI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
         </div>
      </div>
 
-     <div class="news-section pt-5 pb-5" id="news">
+     <div class="news-section ptb-100" id="news">
          <div class="container">
                 <h2 class="section-title text-center pb-5">Latest News</h2>
                 <div class="card-group-wrapper">
@@ -523,15 +525,174 @@
                                 </div>
                               </div>
                 </div>
+                <div class="pt-5"><button type="button" class="btn btn-secondary btn-lg btn-block">Load More</button></div>
          </div>
      </div>
 
-     <div class="downloads-section pt-5 pb-5" id="downloads">
+     <div class="downloads-section ptb-100" id="downloads">
             <div class="container">
                     <h2 class="section-title text-center pb-5">Downloads</h2>
-                    sdasd
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quo nobis, enim aperiam veniam officiis ea quos aliquam facilis numquam sapiente eligendi laboriosam, minus nesciunt? Nihil quae unde beatae ducimus consequatur voluptas adipisci fugit, voluptatum numquam fuga recusandae dolorem quis excepturi odio voluptate hic iure? Odio aliquid incidunt, nihil repellat consequatur illum debitis repudiandae dicta ratione nisi velit nemo, reiciendis soluta facere aliquam. Expedita suscipit dicta corporis ad similique ratione, ut, voluptas vitae neque sint debitis sed totam provident accusamus deleniti adipisci quasi sunt! Aspernatur sapiente, explicabo accusamus suscipit itaque nemo ipsa minima expedita. Consectetur ut nostrum earum voluptates fugit. A enim quaerat expedita, facere at, ipsum praesentium delectus accusamus reiciendis qui cum, ad illum molestias asperiores iste consequatur laboriosam.</p>
             </div>
-         </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="contact-section ptb-100" id="contact">
+        <div class="container rounded">
+            <h2 class="section-title text-center pb-5 pt-5">Contact</h2>
+            <div class="contact-forms-wrapper">
+                    <div class="row pl-5">
+                            <div class="col-md-9 col-sm-12">
+                                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                                    <div class="row">
+                                    <div class="col-md-6">
+                                            <div class="my-form">
+                                                <input type="text" id="name" name="name" class="form-control" placeholder="Type Your Name Here">
+                                                <label for="name" class="">Your name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-12">
+                                            <div class="my-form">
+                                                <input type="text" id="email" name="email" class="form-control" placeholder="Type Your E-mail Here">
+                                                <label for="email" class="">Your email</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="my-form">
+                                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Type Subject Here">
+                                                <label for="subject" class="">Subject</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="my-form">
+                                                <textarea type="text" id="message" name="message" rows="2" class="form-control" placeholder="Type Message Here"></textarea>
+                                                <label for="message">Your message</label>
+                                            </div>
+            
+                                        </div>
+                                    </div>
+                                </form>
+            
+                            <div class="text-center text-md-left text-sm-center">
+                                <a class="btn btn-dark text-white" onclick="document.getElementById('contact-form').submit();">Send</a>
+                                    </div>
+                                    <div class="status"></div>
+                            </div>
+                            <div class="col-md-3 col-sm-12 text-center">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                                            <p>+ 48 234 567 89</p>
+                                        </li>
+            
+                                        <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                                            <p>konradskolarski@yahoo.com</p>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+            </div>
+           
+        
+
+
+            <div class="management-wrapper text-center pb-5">
+                <div class="management-title">
+                    <h4>MANAGEMENT</h4>
+                    <hr>
+                </div>
+                <div class="manager-wrapper col-md-4 col-sm-12">
+                    <div class="div">
+                            <h5 class="manager-name">Les Concerts Parisiens</h5>
+                            <ul class="list-unstyled manager-data-list text-muted">
+                                <li>
+                                    <p>Marie-Claire Lavigueur</p>
+                                </li>
+                    
+                                <li>
+                                    <p>Phone: ++33 (0)1 48 24 16 97</p>
+                                </li>
+                    
+                                <li>
+                                    <p>E-mail: marieclaire@concertsparisiens.fr</p>
+                                </li>
+                                <li>
+                                    <p>www.website-fr.com</p>
+                                </li>
+                            </ul>
+                    </div> 
+                </div>
+                <div class="manager-wrapper col-md-4 col-sm-12">
+                        <div class="div">
+                                <h5 class="manager-name">Les Concerts Parisiens</h5>
+                                <ul class="list-unstyled manager-data-list text-muted">
+                                    <li>
+                                        <p>Marie-Claire Lavigueur</p>
+                                    </li>
+                        
+                                    <li>
+                                        <p>Phone: ++33 (0)1 48 24 16 97</p>
+                                    </li>
+                        
+                                    <li>
+                                        <p>E-mail: marieclaire@concertsparisiens.fr</p>
+                                    </li>
+                                    <li>
+                                        <p>www.website-fr.com</p>
+                                    </li>
+                                </ul>
+                        </div> 
+                </div>
+                <div class="manager-wrapper col-md-4 col-sm-12">
+                        <div class="div">
+                                <h5 class="manager-name">Les Concerts Parisiens</h5>
+                                <ul class="list-unstyled manager-data-list text-muted">
+                                    <li>
+                                        <p>Marie-Claire Lavigueur</p>
+                                    </li>
+                        
+                                    <li>
+                                        <p>Phone: ++33 (0)1 48 24 16 97</p>
+                                    </li>
+                        
+                                    <li>
+                                        <p>E-mail: marieclaire@concertsparisiens.fr</p>
+                                    </li>
+                                    <li>
+                                        <p>www.website-fr.com</p>
+                                    </li>
+                                </ul>
+                        </div> 
+                </div>
+                <div class="manager-wrapper col-md-4 col-sm-12">
+                        <div class="div">
+                                <h5 class="manager-name">Les Concerts Parisiens</h5>
+                                <ul class="list-unstyled manager-data-list text-muted">
+                                    <li>
+                                        <p>Marie-Claire Lavigueur</p>
+                                    </li>
+                        
+                                    <li>
+                                        <p>Phone: ++33 (0)1 48 24 16 97</p>
+                                    </li>
+                        
+                                    <li>
+                                        <p>E-mail: marieclaire@concertsparisiens.fr</p>
+                                    </li>
+                                    <li>
+                                        <p>www.website-fr.com</p>
+                                    </li>
+                                </ul>
+                        </div> 
+                </div>
+                
+            </div>
+        </div>
+    </div>
+  
 
 
     <!-- Optional JavaScript -->

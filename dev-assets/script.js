@@ -8,6 +8,19 @@ $(document).ready(function() {
     }
   });
 
+  //hide navbar after click #mobile
+  $('.navbar-collapse a').click(function (e) {
+    $('.navbar-collapse').collapse('toggle');
+  });
+
+  function init_carousel() {
+    H = +($(window).height() /* -height here  */); // or $('.carousel-inner') as you want ...
+    $('.carousel-inner').css('height', H + 'px');
+  
+}
+window.onload = init_carousel;
+init_carousel();
+
   
   //albums hover effect
   /*$('#rachmaninov .album-hover-wrapper').hover( function(){

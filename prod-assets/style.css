@@ -1,6 +1,14 @@
-@font-face {
-  font-family: amadeusFont;
-  src: url("AMADEUS_.TTF"); }
+.ptb-100 {
+  padding-top: 100px;
+  padding-right: 0px;
+  padding-bottom: 100px;
+  padding-left: 0px; }
+  @media (max-width: 767.98px) {
+    .ptb-100 {
+      padding-top: 40px;
+      padding-right: 0px;
+      padding-bottom: 70px;
+      padding-left: 0px; } }
 
 body {
   font-family: 'Open Sans', sans-serif; }
@@ -80,6 +88,7 @@ a:focus, a:hover, a:visited {
   } */ }
 
 .navbar-default {
+  width: inherit;
   background-color: #343a40;
   background: rgba(0, 0, 0, 0.5);
   font-size: 20px;
@@ -87,7 +96,37 @@ a:focus, a:hover, a:visited {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
-  text-transform: none; }
+  text-transform: none;
+  -webkit-box-shadow: 2px 9px 10px -3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 9px 10px -3px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 9px 10px -3px rgba(0, 0, 0, 0.4); }
+  .navbar-default .dropdown:hover .dropdown-menu {
+    background-color: #151515;
+    display: block; }
+    .navbar-default .dropdown:hover .dropdown-menu .dropdown-item {
+      color: #cccccc;
+      background-color: #151515; }
+      .navbar-default .dropdown:hover .dropdown-menu .dropdown-item:hover {
+        color: white; }
+  @media (max-width: 767.98px) {
+    .navbar-default {
+      margin-left: auto;
+      margin-right: auto; }
+      .navbar-default .dropdown-menu {
+        display: block;
+        text-align: center;
+        background: transparent !important;
+        padding-top: -10px;
+        margin-top: -10px; }
+        .navbar-default .dropdown-menu .dropdown-item {
+          line-height: 10px;
+          font-weight: lighter;
+          font-style: italic;
+          background: transparent !important;
+          color: rgba(255, 255, 255, 0.5); }
+          .navbar-default .dropdown-menu .dropdown-item:hover {
+            color: rgba(255, 255, 255, 0.75);
+            background: transparent; } }
   @media (max-width: 767.98px) {
     .navbar-default h1 {
       display: none; } }
@@ -99,48 +138,65 @@ a:focus, a:hover, a:visited {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        text-align: center; } }
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto; } }
   .navbar-default .nav-item {
     padding: 10px; }
 
 .dropdown-toggle:after {
   display: none; }
 
-.dropdown:hover .dropdown-menu {
-  background-color: #151515;
-  display: block; }
-  .dropdown:hover .dropdown-menu .dropdown-item {
-    color: #cccccc;
-    background-color: #151515; }
-    .dropdown:hover .dropdown-menu .dropdown-item:hover {
-      color: white; }
-
-.about-me-section {
-  margin-top: 40px; }
-  .about-me-section .carousel {
-    width: 1000px;
-    height: 900px;
-    margin: 0 auto; }
-    @media (max-width: 767.98px) {
-      .about-me-section .carousel {
-        width: 576px; } }
-  .about-me-section .biography-section {
-    margin: 0.85em 0; }
-    .about-me-section .biography-section p {
+.dropdown {
+  /* 
+  &:hover {
+    .dropdown-menu {
+      background-color: #151515;
       display: block;
-      font-family: Helvetica, Arial, sans-serif;
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px; }
+      .dropdown-item {
+        color: darken($color: white, $amount: 20);
+        background-color: #151515;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  } 
+  */ }
+
+.about-me-section .carousel {
+  width: 1000px;
+  height: 900px;
+  margin: 0 auto; }
+  @media (max-width: 767.98px) {
+    .about-me-section .carousel {
+      width: 100%; } }
+
+.about-me-section .biography-section {
+  margin: 0.85em 0; }
+  .about-me-section .biography-section p {
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; }
+
+.carousel .carousel-control {
+  visibility: hidden; }
 
 .carousel-control-prev-icon {
   background-image: url("https://icons-for-free.com/iconfiles/png/512/keyboard+arrow+left+48px-131985225817132836.png");
   width: 100%;
-  height: 140px; }
+  height: 120px; }
   @media (max-width: 767.98px) {
     .carousel-control-prev-icon {
-      display: none; } }
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      height: 100%; } }
 
 .carousel-control-next-icon {
   background-image: url("https://icons-for-free.com/iconfiles/png/512/keyboard+arrow+right+48px-131985225841288821.png");
@@ -169,6 +225,13 @@ a:focus, a:hover, a:visited {
   opacity: 0.95;
   background-attachment: fixed;
   background-position: 50% -51.7904px; }
+  @media (max-width: 767.98px) {
+    .next-section {
+      width: 100%;
+      min-height: 300px;
+      opacity: 0.95;
+      background-attachment: fixed;
+      background-position: 50% -51.7904px; } }
 
 .recordings-section {
   padding-top: 100px;
@@ -294,23 +357,88 @@ a:focus, a:hover, a:visited {
         margin-bottom: 20px; } }
 
 .media-section {
-  padding-top: 100px;
-  padding-bottom: 100px;
   background: url("../images/gallery/gallery_5.JPG"); }
-  .media-section h2 {
-    color: #dcdcdc; }
-  .media-section h5 {
-    font-size: 32px;
-    color: #151515;
-    transition: .2s ease-in-out;
-    height: 35px; }
-    .media-section h5:hover {
-      color: #626262; }
+  .media-section .text-title-wrapper {
+    padding-bottom: 20px; }
+    .media-section .text-title-wrapper h2 {
+      font-size: 58px;
+      color: #dcdcdc; }
+    .media-section .text-title-wrapper h5 {
+      padding-top: 20px;
+      font-size: 32px;
+      color: #151515;
+      transition: .2s ease-in-out;
+      height: 35px; }
+      .media-section .text-title-wrapper h5:hover {
+        color: #626262; }
+      @media (max-width: 767.98px) {
+        .media-section .text-title-wrapper h5 {
+          font-size: 24px;
+          padding-top: 0px;
+          padding-bottom: 30px; }
+          .media-section .text-title-wrapper h5:hover {
+            color: white; } }
 
 .news-section p {
   color: #909090; }
 
+.news-section button {
+  background: #343a40;
+  color: #dcdcdc; }
+
 .downloads-section {
-  background: #151515; }
+  background: #151515;
+  padding-top: 100px;
+  padding-bottom: 100px; }
   .downloads-section h2 {
     color: white; }
+  .downloads-section p {
+    color: white; }
+
+.contact-section {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .contact-section h2 {
+    color: white; }
+  .contact-section p {
+    color: white; }
+  .contact-section li, .contact-section label {
+    color: white; }
+  .contact-section .container {
+    background: #151515;
+    -webkit-box-shadow: -17px 19px 17px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: -17px 19px 17px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: -17px 19px 17px 0px rgba(0, 0, 0, 0.4); }
+  @media (max-width: 767.98px) {
+    .contact-section .contact-forms-wrapper {
+      padding-right: 45px;
+      text-align: center; }
+      .contact-section .contact-forms-wrapper .btn {
+        margin-top: 20px;
+        margin-bottom: 20px; } }
+  .contact-section .management-wrapper {
+    color: white;
+    padding-top: 40px; }
+    .contact-section .management-wrapper hr {
+      width: 100%;
+      background-color: white;
+      margin-top: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: solid;
+      border-width: .1px; }
+    .contact-section .management-wrapper .management-title {
+      font-weight: bold;
+      font-size: 12px; }
+    .contact-section .management-wrapper .manager-wrapper {
+      display: inline-flex;
+      justify-content: center; }
+      .contact-section .management-wrapper .manager-wrapper .manager-name {
+        padding-top: 20px;
+        font-weight: bold;
+        font-size: 16px; }
+      .contact-section .management-wrapper .manager-wrapper .manager-data-list {
+        padding-top: 6px; }
+        .contact-section .management-wrapper .manager-wrapper .manager-data-list li {
+          font-size: 14px;
+          line-height: 8px; }

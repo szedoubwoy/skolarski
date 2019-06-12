@@ -3,9 +3,18 @@
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins/_breakpoints";
 
-@font-face {
-  font-family: amadeusFont;
-  src: url('AMADEUS_.TTF');
+.ptb-100{
+  padding-top: 100px;
+  padding-right: 0px;
+  padding-bottom: 100px;
+  padding-left: 0px;
+    @include media-breakpoint-down(sm) {
+      padding-top: 40px;
+      padding-right: 0px;
+      padding-bottom: 70px;
+      padding-left: 0px;
+  }
+
 }
 
 .ekko-lightbox-nav-overlay {
@@ -20,6 +29,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+ 
 }
 
 a:focus, a:hover, a:visited {
@@ -112,7 +122,9 @@ $bq_padding_l_next: 50px;
 }
 //////////////////NAVBAR\\\\\\\\\\\\\\\\\\\\
 
+
 .navbar-default {
+  width: inherit;
   background-color: #343a40;
   background: rgba(0, 0, 0, 0.5);
   font-size: 20px;
@@ -122,6 +134,56 @@ $bq_padding_l_next: 50px;
   font-style: normal;
   text-transform: none;
 
+  -webkit-box-shadow: 2px 9px 10px -3px rgba(0,0,0,0.4);
+  -moz-box-shadow: 2px 9px 10px -3px rgba(0,0,0,0.4);
+  box-shadow: 2px 9px 10px -3px rgba(0,0,0,0.4);
+
+ 
+  .dropdown {
+
+    &:hover {
+      .dropdown-menu {
+        background-color: #151515;
+        display: block;
+        .dropdown-item {
+          color: darken($color: white, $amount: 20);
+          background-color: #151515;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    } 
+  }
+
+
+
+@include media-breakpoint-down(sm) {
+  margin-left: auto;
+  margin-right: auto;
+  .dropdown-menu {
+    display: block;
+    text-align: center;
+    background: transparent !important;
+    padding-top: -10px;
+    margin-top: -10px;
+    .dropdown-item {
+      line-height: 10px;
+      font-weight: lighter;
+      font-style: italic;
+      
+      background: transparent !important;
+      color: rgba(255,255,255,.5);
+      &:hover {
+        color: rgba(255,255,255,.75);
+        
+        background: transparent;
+      }
+    }
+    
+  }
+}
+
   h1{
     //color: gold;
     @include media-breakpoint-down(sm){
@@ -129,14 +191,19 @@ $bq_padding_l_next: 50px;
     }
   }
 
+ 
+
   .navbar_left, .navbar_right{
     display: inline-flex;
     flex-direction: row;
+
     @include media-breakpoint-down(sm) {
       display: flex;
       justify-content: center;
       flex-direction: column;
       text-align: center;
+      margin-left: auto;
+  margin-right: auto;
     }
   }
 
@@ -155,6 +222,7 @@ $bq_padding_l_next: 50px;
 }
 
 .dropdown {
+  /* 
   &:hover {
     .dropdown-menu {
       background-color: #151515;
@@ -168,18 +236,17 @@ $bq_padding_l_next: 50px;
       }
     }
   } 
+  */
 }
 
 /////////////////ABOUT ME \\\\\\\\\\\\\\\\\\\\\
 .about-me-section {
-  margin-top: 40px;
-
   .carousel {
     width: 1000px; 
     height: 900px;
     margin: 0 auto;
     @include media-breakpoint-down(sm) {
-      width: 576px; 
+      width: 100%; 
     }
   }
 
@@ -197,15 +264,26 @@ $bq_padding_l_next: 50px;
   }
 
 } 
+.carousel .carousel-control { visibility: hidden; }
+.fixed-top {
+ // width: 75%;
+ // margin-left: auto;
+ // margin-right: auto;
+}
 
 //CAROUSEL SETTINGS ABOUT ME
 $carousel_control_space: -140px;
 .carousel-control-prev-icon {
   background-image: url("https://icons-for-free.com/iconfiles/png/512/keyboard+arrow+left+48px-131985225817132836.png");
   width: 100%;
-  height: 140px;
+  height: 120px;
   @include media-breakpoint-down(sm) {
    display: none;
+   position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
   }
 }
 
@@ -249,6 +327,15 @@ $carousel_control_space: -140px;
  // background-image: url('../images/blurred.jpg');
   background-attachment: fixed;
   background-position: 50% -51.7904px;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    min-height : 300px;
+    opacity: 0.95;
+   // background-image: url('../images/blurred.jpg');
+    background-attachment: fixed;
+    background-position: 50% -51.7904px;
+   }
 }
 
 // background: #ddd;
@@ -455,22 +542,37 @@ $carousel_control_space: -140px;
 }
 
 .media-section {
-padding-top: 100px;
-padding-bottom: 100px;
+ // padding-top: 100px;
+ // padding-bottom: 100px;
   background: url('../images/gallery/gallery_5.JPG');
- // background: #151515;
-  h2 {
-    color: #dcdcdc;
-  }
-  h5 {
-    font-size: 32px;
-    color: #151515;
-    transition: .2s ease-in-out;
-    height: 35px;
-    &:hover {
-      color: lighten($color: #151515, $amount: 30);
+ 
+  .text-title-wrapper {
+    padding-bottom: 20px;
+    h2 {
+      font-size: 58px;
+      color: #dcdcdc;
+    }
+    h5 {
+      padding-top: 20px;
+      font-size: 32px;
+      color: #151515;
+      transition: .2s ease-in-out;
+      height: 35px;
+      
+      &:hover {
+        color: lighten($color: #151515, $amount: 30);
+      }
+      @include media-breakpoint-down(sm){
+        &:hover {
+          color: white;
+        }
+        font-size: 24px;
+        padding-top: 0px;
+        padding-bottom: 30px;
+       }
     }
   }
+  
 }
 
 .news-section {
@@ -478,12 +580,99 @@ padding-bottom: 100px;
     color: darken($color: #dcdcdc, $amount: 30);
   }
 
+  button {
+    background: #343a40;
+    color: #dcdcdc;
+  }
+
 
 }
 
 .downloads-section {
   background: #151515;
+  padding-top: 100px;
+  padding-bottom: 100px;
   h2{
     color: white;
+  }
+  p {
+    color: white;
+  }
+}
+
+.contact-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  h2{
+   // color: #151515;;
+   color: white;
+  }
+  p {
+    color: white;
+  }
+  li, label{
+    color: white;
+  }
+  .container {
+    background: #151515;
+    -webkit-box-shadow: -17px 19px 17px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: -17px 19px 17px 0px rgba(0,0,0,0.4);
+    box-shadow: -17px 19px 17px 0px rgba(0,0,0,0.4);
+  }
+
+  .contact-forms-wrapper {
+    @include media-breakpoint-down(sm){
+      padding-right: 45px;
+     // display: flex;
+     // justify-content: center;
+     // flex-direction: column;
+     text-align: center;
+
+     .btn {
+       margin-top: 20px;
+       margin-bottom: 20px;
+     }
+    }
+
+  }
+
+  .management-wrapper {
+    color: white;
+    hr { 
+      width: 100%;
+      background-color: lighten($color: #948a99, $amount: 80);
+      margin-top: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style:solid;
+      border-width: .1px;
+    } 
+    padding-top: 40px;
+    .management-title {
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    .manager-wrapper {
+      display: inline-flex;
+      justify-content: center;
+      //flex-direction: row;
+      .manager-name {
+        padding-top: 20px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .manager-data-list {
+        padding-top: 6px;
+        
+       // ul {
+          li {
+            
+            font-size: 14px;
+            line-height: 8px;
+          }
+        //}
+      }
+    }
   }
 }
