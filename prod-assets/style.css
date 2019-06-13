@@ -318,14 +318,18 @@ a:focus, a:hover, a:visited {
   z-index: 59;
   opacity: 0; }
 
+.gallery-section button {
+  background: #343a40;
+  color: #dcdcdc; }
+
 .gallery-section .gallery-wrapper {
   display: flex;
   flex-wrap: wrap; }
   .gallery-section .gallery-wrapper .gallery-image-wrapper {
     position: relative;
     margin: 20px 20px;
-    width: 220px;
-    height: 150px;
+    width: 250px;
+    height: 180px;
     -webkit-box-shadow: 0 8px 12px -6px black;
     -moz-box-shadow: 0 8px 12px -6px black;
     box-shadow: 0 8px 12px -6px black;
@@ -333,13 +337,13 @@ a:focus, a:hover, a:visited {
     .gallery-section .gallery-wrapper .gallery-image-wrapper:hover {
       padding-top: 10px; }
     .gallery-section .gallery-wrapper .gallery-image-wrapper img {
-      width: 220px;
-      height: 150px; }
+      width: 250px;
+      height: 180px; }
     .gallery-section .gallery-wrapper .gallery-image-wrapper .label-image-hover {
       position: absolute;
       cursor: pointer;
-      width: 220px;
-      height: 150px;
+      width: 250px;
+      height: 180px;
       opacity: 0;
       background: black;
       color: white;
@@ -394,6 +398,50 @@ a:focus, a:hover, a:visited {
     color: white; }
   .downloads-section p {
     color: white; }
+  .downloads-section .category-wrapper {
+    display: inline-flex; }
+    .downloads-section .category-wrapper h4 {
+      text-align: center; }
+    .downloads-section .category-wrapper .category-btn {
+      margin-left: 25px;
+      width: 200px;
+      height: auto; }
+      .downloads-section .category-wrapper .category-btn i {
+        padding-left: 4px; }
+    @media (max-width: 767.98px) {
+      .downloads-section .category-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center; }
+        .downloads-section .category-wrapper .category-btn {
+          margin-bottom: 6px; } }
+  .downloads-section .file-wrapper {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 100px;
+    background: #dcdcdc; }
+    .downloads-section .file-wrapper .file-icon {
+      padding-top: 10px; }
+    .downloads-section .file-wrapper .file-info {
+      padding-top: 5px;
+      margin-left: -90px; }
+      .downloads-section .file-wrapper .file-info .file-name {
+        color: #151515;
+        font-size: 18px;
+        white-space: nowrap;
+        font-weight: bold; }
+      .downloads-section .file-wrapper .file-info .file-desc {
+        font-size: 12px; }
+    .downloads-section .file-wrapper .download-btn {
+      width: 150px;
+      height: 40px;
+      margin-left: 100px;
+      margin-top: -60px; }
+      .downloads-section .file-wrapper .download-btn i {
+        padding-left: 10px; }
 
 .contact-section {
   padding-top: 100px;
@@ -406,13 +454,18 @@ a:focus, a:hover, a:visited {
     color: white; }
   .contact-section .container {
     background: #151515;
-    -webkit-box-shadow: -17px 19px 17px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: -17px 19px 17px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: -17px 19px 17px 0px rgba(0, 0, 0, 0.4); }
+    -webkit-box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.75); }
+  .contact-section button {
+    background: #343a40;
+    color: #dcdcdc; }
   @media (max-width: 767.98px) {
     .contact-section .contact-forms-wrapper {
       padding-right: 45px;
       text-align: center; }
+      .contact-section .contact-forms-wrapper form {
+        text-align: center; }
       .contact-section .contact-forms-wrapper .btn {
         margin-top: 20px;
         margin-bottom: 20px; } }

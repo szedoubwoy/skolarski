@@ -473,21 +473,18 @@ $carousel_control_space: -140px;
 // GALERYY
 
 .gallery-section {
- 
+  button {
+    background: #343a40;
+    color: #dcdcdc;
+  }
 .gallery-wrapper {
   display: flex;
   flex-wrap: wrap;
-  //justify-content: center;
-  //display: flex;
- // justify-content: center;
- // position: relative;
- // display: flex;
- // justify-content: center;
   .gallery-image-wrapper {
     position: relative;
     margin: 20px 20px;
-    width: 220px;
-    height: 150px;
+    width: 250px;
+    height: 180px;
     -webkit-box-shadow: 0 8px 12px -6px black;
 	   -moz-box-shadow: 0 8px 12px -6px black;
           box-shadow: 0 8px 12px -6px black;
@@ -499,8 +496,8 @@ $carousel_control_space: -140px;
     img {
      // margin: 0;
      // data-max-width="280" data-max-height="200"
-      width: 220px;
-      height: 150px;
+     width: 250px;
+     height: 180px;
 
     }
 
@@ -508,8 +505,8 @@ $carousel_control_space: -140px;
       position:absolute;
       //display: block;
       cursor: pointer;
-      width: 220px;
-      height: 150px;
+      width: 250px;
+      height: 180px;
       opacity: 0;
       background: black;
       color: white;
@@ -536,6 +533,8 @@ $carousel_control_space: -140px;
       margin-bottom: 20px;
     }
   }
+
+  
 }
   
  
@@ -598,6 +597,81 @@ $carousel_control_space: -140px;
   p {
     color: white;
   }
+
+  .category-wrapper {
+    display: inline-flex;
+
+    h4 {
+      text-align: center;
+    }
+    .category-btn {
+      margin-left: 25px;
+      width: 200px;
+      height: auto;
+
+      i {
+        padding-left: 4px;
+      }
+    }
+
+    @include media-breakpoint-down(sm){
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      
+      .category-btn {
+        margin-bottom: 6px;
+      }
+    }
+
+  }
+
+  .file-wrapper {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 100px;
+    background: #dcdcdc;
+   // border-radius: 15px;
+
+    .file-icon {
+      padding-top: 10px;
+    }
+
+    .file-info {
+      padding-top: 5px;
+      margin-left: -90px;
+
+      .file-name {
+        color: #151515;
+        font-size: 18px;
+        white-space: nowrap;
+        font-weight: bold;
+      }
+  
+      .file-desc {
+        font-size: 12px;
+      }
+    }
+
+   
+
+    .download-btn {
+     // display: inline-block;
+      width: 150px;
+      height: 40px;
+      margin-left: 100px;
+      margin-top: -60px;
+     // margin-right: 60px;
+
+      i {
+        padding-left: 10px;
+      }
+    }
+  }
+
 }
 
 .contact-section {
@@ -615,9 +689,14 @@ $carousel_control_space: -140px;
   }
   .container {
     background: #151515;
-    -webkit-box-shadow: -17px 19px 17px 0px rgba(0,0,0,0.4);
-    -moz-box-shadow: -17px 19px 17px 0px rgba(0,0,0,0.4);
-    box-shadow: -17px 19px 17px 0px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 3px 25px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 25px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 25px 0px rgba(0,0,0,0.75);
+  }
+
+  button {
+    background: #343a40;
+    color: #dcdcdc;
   }
 
   .contact-forms-wrapper {
@@ -627,6 +706,9 @@ $carousel_control_space: -140px;
      // justify-content: center;
      // flex-direction: column;
      text-align: center;
+     form{
+      text-align: center;
+     }
 
      .btn {
        margin-top: 20px;
