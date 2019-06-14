@@ -1,17 +1,24 @@
 $(document).ready(function() {
   //navbar scroll
   $(window).scroll(function(){
-    if($(this).scrollTop() > ( ($('.hero').height() ) - $('.navbar-default').height()-24) ) {
-      $('.navbar-default').css('background', 'rgba(0, 0, 0, 1)');
-    } else {
-      $('.navbar-default').css('background', 'rgba(0, 0, 0, 0.5)');
+    if ($(window).width() > (576 || 768)) {
+      if($(this).scrollTop() > ( ($('.hero').height() ) - $('.navbar-default').height()-24) ) {
+        $('.navbar-default').css('background', 'rgba(52, 58, 64, 1)');
+      } else {
+        $('.navbar-default').css('background', 'rgba(52, 58, 64, 0.5)');
+      }
+    } else { 
+      $('.navbar-default').css('background', 'rgba(52, 58, 64, 1)');
+
+       //hide navbar after click #mobile
+        $('.navbar-collapse a').click(function (e) {
+          $('.navbar-collapse').collapse('toggle');
+        });
     }
+    
   });
 
-  //hide navbar after click #mobile
-  $('.navbar-collapse a').click(function (e) {
-    $('.navbar-collapse').collapse('toggle');
-  });
+ 
 
   function init_carousel() {
     H = +($(window).height() /* -height here  */); // or $('.carousel-inner') as you want ...

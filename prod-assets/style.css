@@ -19,7 +19,8 @@ a:focus, a:hover, a:visited {
   color: white; }
 
 .fa-youtube {
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  color: white; }
   .fa-youtube:hover {
     color: #c21616; }
 
@@ -36,7 +37,7 @@ a:focus, a:hover, a:visited {
     color: green; }
 
 .hero {
-  min-height: 1000px;
+  min-height: 800px;
   color: white;
   margin-top: -10px; }
   .hero .jumbotron {
@@ -88,10 +89,8 @@ a:focus, a:hover, a:visited {
   } */ }
 
 .navbar-default {
-  width: inherit;
-  background-color: #343a40;
-  background: rgba(0, 0, 0, 0.5);
-  font-size: 20px;
+  background: rgba(52, 58, 64, 0.5);
+  font-size: 22px;
   line-height: 1.2;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -100,39 +99,63 @@ a:focus, a:hover, a:visited {
   -webkit-box-shadow: 2px 9px 10px -3px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 2px 9px 10px -3px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 9px 10px -3px rgba(0, 0, 0, 0.4); }
-  .navbar-default .dropdown:hover .dropdown-menu {
-    background-color: #151515;
-    display: block; }
-    .navbar-default .dropdown:hover .dropdown-menu .dropdown-item {
-      color: #cccccc;
-      background-color: #151515; }
-      .navbar-default .dropdown:hover .dropdown-menu .dropdown-item:hover {
-        color: white; }
+  @media (max-width: 767.98px) {
+    .navbar-default .navbar-brand {
+      display: none; } }
+  @media (max-width: 767.98px) {
+    .navbar-default .navbar-nav {
+      margin-bottom: -10px; } }
+  .navbar-default .yt-nav {
+    display: inline-flex;
+    margin-right: auto;
+    justify-content: flex-start;
+    margin-left: -100px; }
+    @media (max-width: 767.98px) {
+      .navbar-default .yt-nav {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto; } }
+  .navbar-default .dropdown {
+    padding-bottom: 20px; }
+    .navbar-default .dropdown:hover .dropdown-menu {
+      background-color: #151515;
+      display: block; }
+      .navbar-default .dropdown:hover .dropdown-menu .dropdown-item {
+        color: #cccccc;
+        background-color: #151515; }
+        .navbar-default .dropdown:hover .dropdown-menu .dropdown-item:hover {
+          color: white; }
   @media (max-width: 767.98px) {
     .navbar-default {
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      background: #151515; }
       .navbar-default .dropdown-menu {
         display: block;
         text-align: center;
         background: transparent !important;
-        padding-top: -10px;
-        margin-top: -10px; }
+        padding-top: 12px;
+        margin-top: -10px;
+        border: none; }
         .navbar-default .dropdown-menu .dropdown-item {
           line-height: 10px;
           font-weight: lighter;
           font-style: italic;
+          border: none;
           background: transparent !important;
           color: rgba(255, 255, 255, 0.5); }
           .navbar-default .dropdown-menu .dropdown-item:hover {
+            border: none;
             color: rgba(255, 255, 255, 0.75);
             background: transparent; } }
-  @media (max-width: 767.98px) {
-    .navbar-default h1 {
-      display: none; } }
   .navbar-default .navbar_left, .navbar-default .navbar_right {
     display: inline-flex;
     flex-direction: row; }
+    .navbar-default .navbar_left .nav-item, .navbar-default .navbar_right .nav-item {
+      padding: 10px; }
     @media (max-width: 767.98px) {
       .navbar-default .navbar_left, .navbar-default .navbar_right {
         display: flex;
@@ -140,9 +163,8 @@ a:focus, a:hover, a:visited {
         flex-direction: column;
         text-align: center;
         margin-left: auto;
-        margin-right: auto; } }
-  .navbar-default .nav-item {
-    padding: 10px; }
+        margin-right: auto;
+        padding-bottom: -40px; } }
 
 .dropdown-toggle:after {
   display: none; }
@@ -165,52 +187,24 @@ a:focus, a:hover, a:visited {
   */ }
 
 .about-me-section .carousel {
-  width: 1000px;
   height: 900px;
   margin: 0 auto; }
   @media (max-width: 767.98px) {
     .about-me-section .carousel {
-      width: 100%; } }
+      height: 1500px; } }
 
 .about-me-section .biography-section {
   margin: 0.85em 0; }
   .about-me-section .biography-section p {
     display: block;
-    font-family: Helvetica, Arial, sans-serif;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px; }
+    font-family: Helvetica, Arial, sans-serif; }
+  @media (max-width: 767.98px) {
+    .about-me-section .biography-section {
+      height: 100%;
+      width: 100%; } }
 
 .carousel .carousel-control {
   visibility: hidden; }
-
-.carousel-control-prev-icon {
-  background-image: url("https://icons-for-free.com/iconfiles/png/512/keyboard+arrow+left+48px-131985225817132836.png");
-  width: 100%;
-  height: 120px; }
-  @media (max-width: 767.98px) {
-    .carousel-control-prev-icon {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      max-width: 100%;
-      height: 100%; } }
-
-.carousel-control-next-icon {
-  background-image: url("https://icons-for-free.com/iconfiles/png/512/keyboard+arrow+right+48px-131985225841288821.png");
-  width: 100%;
-  height: 140px; }
-  @media (max-width: 767.98px) {
-    .carousel-control-next-icon {
-      display: none; } }
-
-.carousel-control-prev {
-  margin-left: -140px; }
-
-.carousel-control-next {
-  margin-right: -140px; }
 
 #about_me_2 {
   font-size: 20px; }
@@ -393,9 +387,13 @@ a:focus, a:hover, a:visited {
 .downloads-section {
   background: #151515;
   padding-top: 100px;
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  text-align: center; }
   .downloads-section h2 {
     color: white; }
+    @media (max-width: 767.98px) {
+      .downloads-section h2 {
+        padding-left: 22px; } }
   .downloads-section p {
     color: white; }
   .downloads-section .category-wrapper {
@@ -415,7 +413,9 @@ a:focus, a:hover, a:visited {
         flex-direction: column;
         text-align: center; }
         .downloads-section .category-wrapper .category-btn {
-          margin-bottom: 6px; } }
+          margin-bottom: 6px; }
+        .downloads-section .category-wrapper h4 {
+          padding-left: 20px; } }
   .downloads-section .file-wrapper {
     display: inline-flex;
     flex-wrap: wrap;
@@ -423,18 +423,72 @@ a:focus, a:hover, a:visited {
     width: 500px;
     height: 100px;
     background: #dcdcdc; }
+    @media (max-width: 767.98px) {
+      .downloads-section .file-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        text-align: left;
+        width: 350px;
+        padding-top: 15px; }
+        .downloads-section .file-wrapper .file-info .file-name {
+          text-align: left; }
+        .downloads-section .file-wrapper .file-info .file-desc {
+          padding-bottom: 8px;
+          font-size: 12px; }
+          .downloads-section .file-wrapper .file-info .file-desc .file-size {
+            display: inline-block;
+            padding-right: 5px; }
+          .downloads-section .file-wrapper .file-info .file-desc .file-date {
+            display: inline-block; }
+        .downloads-section .file-wrapper .file-icon {
+          margin-left: -25px;
+          padding-bottom: 20px;
+          padding-top: 0; } }
     .downloads-section .file-wrapper .file-icon {
-      padding-top: 10px; }
+      padding-top: 10px;
+      padding-right: 100px; }
+      @media (max-width: 767.98px) {
+        .downloads-section .file-wrapper .file-icon {
+          padding-right: -20px;
+          margin-top: -12px; } }
     .downloads-section .file-wrapper .file-info {
       padding-top: 5px;
       margin-left: -90px; }
+      @media (max-width: 767.98px) {
+        .downloads-section .file-wrapper .file-info {
+          margin-left: -140px; } }
       .downloads-section .file-wrapper .file-info .file-name {
         color: #151515;
         font-size: 18px;
         white-space: nowrap;
-        font-weight: bold; }
+        font-weight: bold;
+        padding-left: 100px; }
+        @media (max-width: 767.98px) {
+          .downloads-section .file-wrapper .file-info .file-name {
+            padding-left: 40px;
+            padding-bottom: 16px;
+            margin-top: -16px; } }
       .downloads-section .file-wrapper .file-info .file-desc {
-        font-size: 12px; }
+        padding-bottom: 8px;
+        font-size: 12px;
+        padding-left: 90px; }
+        @media (max-width: 767.98px) {
+          .downloads-section .file-wrapper .file-info .file-desc {
+            padding-bottom: 20px;
+            margin-top: -18px;
+            margin-left: -50px; } }
+        .downloads-section .file-wrapper .file-info .file-desc .file-size {
+          display: inline-block;
+          padding-right: 5px; }
+        .downloads-section .file-wrapper .file-info .file-desc .file-date {
+          display: inline-block; }
+      .downloads-section .file-wrapper .file-info .download-button {
+        padding-top: 35px; }
+        @media (max-width: 767.98px) {
+          .downloads-section .file-wrapper .file-info .download-button {
+            margin-left: -60px;
+            margin-top: -18px; } }
     .downloads-section .file-wrapper .download-btn {
       width: 150px;
       height: 40px;

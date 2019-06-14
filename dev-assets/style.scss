@@ -27,6 +27,7 @@
   }
 }
 
+
 body {
   font-family: 'Open Sans', sans-serif;
  
@@ -41,6 +42,7 @@ a:focus, a:hover, a:visited {
 //icons hover
 .fa-youtube {
   transition: all 0.5s;
+  color: white;
   &:hover {
     color: #c21616;
   }
@@ -63,7 +65,7 @@ a:focus, a:hover, a:visited {
 }
 
 .hero {
-  min-height : 1000px;
+  min-height : 800px;
   color: white;
   margin-top: -10px;
   .jumbotron{
@@ -124,10 +126,8 @@ $bq_padding_l_next: 50px;
 
 
 .navbar-default {
-  width: inherit;
-  background-color: #343a40;
-  background: rgba(0, 0, 0, 0.5);
-  font-size: 20px;
+  background: rgba(52, 58, 64, 0.5);
+  font-size: 22px; //20px
   line-height: 1.2;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -137,10 +137,39 @@ $bq_padding_l_next: 50px;
   -webkit-box-shadow: 2px 9px 10px -3px rgba(0,0,0,0.4);
   -moz-box-shadow: 2px 9px 10px -3px rgba(0,0,0,0.4);
   box-shadow: 2px 9px 10px -3px rgba(0,0,0,0.4);
+  
+  .navbar-brand {
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
+  }
 
+  
+  .navbar-nav {
+    @include media-breakpoint-down(sm){
+      margin-bottom: -10px;
+    }
+  }
+  
+  .yt-nav {
+    display: inline-flex;
+    margin-right: auto;
+    justify-content: flex-start;
+    margin-left: -100px;
+
+    @include media-breakpoint-down(sm){
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+     
+    }
+  }
  
   .dropdown {
-
+    padding-bottom: 20px;
     &:hover {
       .dropdown-menu {
         background-color: #151515;
@@ -161,20 +190,24 @@ $bq_padding_l_next: 50px;
 @include media-breakpoint-down(sm) {
   margin-left: auto;
   margin-right: auto;
+  background: #151515;;
   .dropdown-menu {
     display: block;
     text-align: center;
     background: transparent !important;
-    padding-top: -10px;
+    padding-top: 12px;
     margin-top: -10px;
+    border: none;
     .dropdown-item {
       line-height: 10px;
       font-weight: lighter;
       font-style: italic;
+      border: none;
       
       background: transparent !important;
       color: rgba(255,255,255,.5);
       &:hover {
+        border: none;
         color: rgba(255,255,255,.75);
         
         background: transparent;
@@ -184,12 +217,12 @@ $bq_padding_l_next: 50px;
   }
 }
 
-  h1{
+  //h1{
     //color: gold;
-    @include media-breakpoint-down(sm){
-      display: none;
-    }
-  }
+  //  @include media-breakpoint-down(sm){
+   //   display: none;
+   // }
+//  }
 
  
 
@@ -197,20 +230,25 @@ $bq_padding_l_next: 50px;
     display: inline-flex;
     flex-direction: row;
 
+    .nav-item{
+      padding: 10px;
+    }
+
     @include media-breakpoint-down(sm) {
       display: flex;
       justify-content: center;
       flex-direction: column;
       text-align: center;
       margin-left: auto;
-  margin-right: auto;
+      margin-right: auto;
+      padding-bottom: -40px;
+      .nav-item{
+       // padding: 0px;
+      }
     }
   }
 
-  .nav-item{
-    padding: 10px;
-    
-  }
+  
 
 }
 .dropdown-toggle {
@@ -240,13 +278,27 @@ $bq_padding_l_next: 50px;
 }
 
 /////////////////ABOUT ME \\\\\\\\\\\\\\\\\\\\\
+
+.carousel-indicators {
+  @include media-breakpoint-down(sm) {
+    //  width: 100%;
+   // left:auto;
+  //right:20px;
+  //margin-right:0;
+ // width:auto; 
+    }
+  
+}
 .about-me-section {
+  
   .carousel {
-    width: 1000px; 
+   // width: 1000px; 
     height: 900px;
     margin: 0 auto;
     @include media-breakpoint-down(sm) {
-      width: 100%; 
+    //  width: 100%; 
+    //  max-width: 400px !important;
+    height: 1500px
     }
   }
 
@@ -255,12 +307,24 @@ $bq_padding_l_next: 50px;
     p {
       display: block;
       font-family: Helvetica, Arial, sans-serif;
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
+      @include media-breakpoint-down(sm) {
+        //  width: 100%; 
+        //  max-width: 400px !important;
+     //   height: 100%;
+     //   width: 100%;
+        }
+     // margin-block-start: 1em;
+     // margin-block-end: 1em;
+    //  margin-inline-start: 0px;
+    //  margin-inline-end: 0px;
       
     }
+    @include media-breakpoint-down(sm) {
+      //  width: 100%; 
+      //  max-width: 400px !important;
+      height: 100%;
+      width: 100%;
+      }
   }
 
 } 
@@ -274,33 +338,33 @@ $bq_padding_l_next: 50px;
 //CAROUSEL SETTINGS ABOUT ME
 $carousel_control_space: -140px;
 .carousel-control-prev-icon {
-  background-image: url("https://icons-for-free.com/iconfiles/png/512/keyboard+arrow+left+48px-131985225817132836.png");
-  width: 100%;
-  height: 120px;
+//@error  background-image: url("https://icons-for-free.com/iconfiles/png/512/keyboard+arrow+left+48px-131985225817132836.png");
+ // width: 100%;
+  //height: 120px;
   @include media-breakpoint-down(sm) {
-   display: none;
-   position: absolute;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    height: 100%;
+  // display: none;
+   //position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  max-width: 100%;
+  //  height: 100%;
   }
 }
 
 .carousel-control-next-icon {
-  background-image: url("https://icons-for-free.com/iconfiles/png/512/keyboard+arrow+right+48px-131985225841288821.png");
-  width: 100%;
-  height: 140px;
+ // background-image: url("https://icons-for-free.com/iconfiles/png/512/keyboard+arrow+right+48px-131985225841288821.png");
+  //width: 100%;
+ // height: 140px;
   @include media-breakpoint-down(sm) {
-    display: none;
+  //  display: none;
    }
 }
 .carousel-control-prev {
-  margin-left: $carousel_control_space;
+ // margin-left: $carousel_control_space;
 }
 
 .carousel-control-next {
-  margin-right: $carousel_control_space;
+ // margin-right: $carousel_control_space;
 }
 
 
@@ -591,8 +655,13 @@ $carousel_control_space: -140px;
   background: #151515;
   padding-top: 100px;
   padding-bottom: 100px;
+  text-align: center;
   h2{
     color: white;
+    @include media-breakpoint-down(sm){
+      padding-left: 22px;
+    }
+
   }
   p {
     color: white;
@@ -613,7 +682,7 @@ $carousel_control_space: -140px;
         padding-left: 4px;
       }
     }
-
+   
     @include media-breakpoint-down(sm){
       display: flex;
       justify-content: center;
@@ -623,10 +692,13 @@ $carousel_control_space: -140px;
       .category-btn {
         margin-bottom: 6px;
       }
+      h4 {
+        padding-left: 20px;
+      }
     }
 
   }
-
+ 
   .file-wrapper {
     display: inline-flex;
     flex-wrap: wrap;
@@ -634,37 +706,109 @@ $carousel_control_space: -140px;
     width: 500px;
     height: 100px;
     background: #dcdcdc;
-   // border-radius: 15px;
+    
+    @include media-breakpoint-down(sm){
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      text-align: left;
+      width: 350px;
+      padding-top: 15px;
+      
+      .file-info {
+       
+        .file-name {
+
+          text-align: left;
+        }
+
+        .file-desc {
+          padding-bottom: 8px;
+          font-size: 12px;
+   
+          
+          .file-size {
+            display: inline-block;
+            padding-right: 5px;
+          }
+          .file-date {
+            display: inline-block;
+          }
+        }
+       
+      }
+      .file-icon {
+        margin-left: -25px;
+        padding-bottom: 20px;
+        padding-top: 0;
+      }
+
+    
+    }
 
     .file-icon {
       padding-top: 10px;
+      padding-right: 100px;
+      @include media-breakpoint-down(sm){
+        padding-right: -20px;
+        margin-top: -12px;
+      }
     }
 
     .file-info {
       padding-top: 5px;
       margin-left: -90px;
+      @include media-breakpoint-down(sm){
+        margin-left: -140px;
+      }
 
       .file-name {
         color: #151515;
         font-size: 18px;
         white-space: nowrap;
         font-weight: bold;
+        padding-left: 100px;
+        @include media-breakpoint-down(sm){
+          padding-left: 40px;
+          padding-bottom: 16px;
+          margin-top: -16px;
+        }
       }
   
       .file-desc {
+        padding-bottom: 8px;
         font-size: 12px;
+        padding-left: 90px;
+
+        @include media-breakpoint-down(sm){
+          padding-bottom: 20px;
+          margin-top: -18px;
+          margin-left: -50px;
+        }
+        
+        .file-size {
+          display: inline-block;
+          padding-right: 5px;
+        }
+        .file-date {
+          display: inline-block;
+        }
+      }
+
+      .download-button {
+        padding-top: 35px;
+        @include media-breakpoint-down(sm){
+          margin-left: -60px;
+          margin-top: -18px;
+        }
       }
     }
 
-   
-
     .download-btn {
-     // display: inline-block;
       width: 150px;
       height: 40px;
       margin-left: 100px;
       margin-top: -60px;
-     // margin-right: 60px;
 
       i {
         padding-left: 10px;

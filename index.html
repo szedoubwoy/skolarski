@@ -41,7 +41,7 @@
                                   <li class="nav-item" onclick="$('#recordings').animatescroll({padding: 60, scrollSpeed:1900});">
                                       <a class="nav-link" href="#">Recordings</a>
                                   </li>
-                                  <li class="nav-item" onclick="$('#gallery').animatescroll({padding:0, scrollSpeed:1900});">
+                                  <li class="nav-item" onclick="$('#gallery').animatescroll({padding:-25, scrollSpeed:1900});">
                                       <a class="nav-link" href="#">Gallery</a>
                                   </li>
                     </div>
@@ -57,7 +57,7 @@
                             <li class="nav-item" onclick="$('#media').animatescroll({padding:0, scrollSpeed:1900});">
                                     <a class="nav-link" href="#">Media</a>
                                 </li>
-                                <li class="nav-item" onclick="$('#news').animatescroll({padding:0, scrollSpeed:1900});">
+                                <li class="nav-item" onclick="$('#news').animatescroll({padding:-20, scrollSpeed:1900});">
                                     <a class="nav-link" href="#">News</a>
                                 </li>
                                 <li class="nav-item" onclick="$('#downloads').animatescroll({padding:150,scrollSpeed:2000});">
@@ -66,11 +66,12 @@
                                 <li class="nav-item" onclick="$('#contact').animatescroll({padding:-40, scrollSpeed:1900});">
                                     <a class="nav-link" href="#">Contact</a>
                                 </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="https://www.youtube.com/channel/UCuEHqcBxZW_XpQp_xBV3uag" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
-                                </li>
+                               
                         </div>     
-                    </ul>  
+                    </ul> 
+                    <div class="nav-item yt-nav">
+                        <a class="nav-link" href="https://www.youtube.com/channel/UCuEHqcBxZW_XpQp_xBV3uag" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                    </div> 
             </div>
             </nav>
           <div class="hero text-center">
@@ -192,7 +193,7 @@
                                                 </p>
                                             <footer class="blockquote-footer">Elżbieta Penderecki, Krzysztof Penderecki</footer>
                                         </blockquote>
-                                        <div class="text-center pt-2"><button type="button" class="btn btn-dark ">SHOW MORE</button></div>
+                                        <div class="text-center pt-2"><button type="button" class="btn btn-dark ">READ MORE</button></div>
                               </div>
                               <div class="carousel-item">
                                     <p class="text-muted text-center">SELECTED REVIEWS</p>  
@@ -205,7 +206,7 @@
                                                 </p>
                                             <footer class="blockquote-footer">Robert Cummings,<cite title="Source Title"> classical.net @ 2013</cite></footer>
                                     </blockquote>
-                                    <div class="text-center pt-2"><button type="button" class="btn btn-dark ">SHOW MORE</button></div>      
+                                    <div class="text-center pt-2"><button type="button" class="btn btn-dark ">READ MORE</button></div>      
                               </div>
                               <div class="carousel-item">
                                     <p class="text-muted text-center">TEXTS</p>  
@@ -215,7 +216,7 @@
                                             <p> K.S.  (…)Basically, all about the so called technique has been said. All solutions to technical problems lie in musical content. I hope it's obvious by now. Nevertheless, we can say a bit more—especially for those readers who don't see any relation between what is hidden between the notes and technique in the common sense. I came across views that the things we discussed earlier are “loftier matters”, things one should deal with at a later stage in one's education. Many pedagogues are of the opinion one should first handle the craft, the technique. The tone, the phrase, the form and finally the spirit of the music become matters the student works on first during his studies. This view results in an overemphasis of the means at the cost of the goals, and it is the goals that should determine the means. Let's quote Neuhaus' maxim again: what defines how. The essence of art and science is not the method, the apparatus, the tool. Technique and brilliance are not an equivalent of creativity. Somebody who separates the technical and the musical elements reminds of the individual described by Freud who spent all his time cleaning his glasses instead of putting them on and looking at the world. (…)Heinrich Neuhaus explains the etymology of the word technique (saying it originates from the Greek word τέχνη, which means art). In my opinion it is a huge simplification. Such a literal translation does not cover the whole problem. The philosopher Martin Heidegger goes much deeper. Examining the content of the lecture, which he gave in 1953 in Münich, we realize that we cannot consider the word techne in isolation from words such as poiesis and thesis. Heidegger, after analyzing the correlations between the words techne, poiesis and thesis, concludes that in fact technique means revealing, evoking, bringing out of concealment into unconcealment. Heidegger once said that “art is the becoming and happening of truth”. So technique is about revealing, evoking, about poetic manifestation. 
                                             </p>
                                         </blockquote>
-                                        <div class="text-center pt-2"><button type="button" class="btn btn-dark ">SHOW MORE</button></div>
+                                        <div class="text-center pt-2"><button type="button" class="btn btn-dark ">READ MORE</button></div>
                               </div>
                            
                             </div>
@@ -534,63 +535,99 @@
                     <h2 class="section-title text-center pb-5">Downloads</h2>
                     <div class="category-wrapper pb-5 mx-auto">
                         <h4 class="text-white pt-1">Category</h4>
-                        <div class=""><button type="button" class="btn btn-secondary category-btn">Recommendations <i class="fas fa-folder-open"></i></button></div>
-                        <div class=""><button type="button" class="btn btn-secondary category-btn">Photos <i class="fas fa-folder-open"></i></button></div>
-                        <div class=""><button type="button" class="btn btn-secondary category-btn">Videos <i class="fas fa-folder-open"></i></button></div>
-                        <div class=""><button type="button" class="btn btn-secondary category-btn">Texts <i class="fas fa-folder-open"></i></button></div>
+                        <div class="" data-aos="flip-left"><button type="button" class="btn btn-secondary category-btn">Recommendations <i class="fas fa-folder-open"></i></button></div>
+                        <div class="" data-aos="flip-left"><button type="button" class="btn btn-secondary category-btn">Photos <i class="fas fa-folder-open"></i></button></div>
+                        <div class="" data-aos="flip-right"><button type="button" class="btn btn-secondary category-btn">Videos <i class="fas fa-folder-open"></i></button></div>
+                        <div class=""data-aos="flip-right" ><button type="button" class="btn btn-secondary category-btn">Texts <i class="fas fa-folder-open"></i></button></div>
                     </div>
                     
-                    <div class="file-wrapper text-white col-md-6 col-sm-12">
-                        <div class="file-icon col-4"><i class="far fa-file-word fa-4x"></i></div>
-                        <div class="file-info col-4">
-                                <div class="file-name ">Panderecki Recommendation</div>
+                    <div class="file-wrapper text-white col-md-6 col-sm-12" data-aos="fade-right">
+                        <div class="file-icon col-2"><i class="far fa-file-word fa-4x"></i></div>
+                        <div class="file-info col-10">
+                                <div class="file-name">Panderecki Recommendation</div>
                                 <div class="file-desc text-muted">
                                     <div class="file-size">222 kb</div>
                                     <div class="file-date">13-06-2019</div>
                                 </div>
-                                <button type="button" class="btn btn-secondary download-btn ">Download<i class="fas fa-file-download"></i></button>
-                        </div>
-                    </div>
-                    <div class="file-wrapper text-white col-md-6 col-sm-12">
-                            <div class="file-icon col-4"><i class="far fa-file-image fa-4x"></i></div>
-                            <div class="file-info col-4">
-                                    <div class="file-name">Concert_photo_1</div>
-                                    <div class="file-desc text-muted">
-                                        <div class="file-size">222 kb</div>
-                                        <div class="file-date">13-06-2019</div>
-                                    </div>
+                                <div class="download-button">
                                     <button type="button" class="btn btn-secondary download-btn ">Download<i class="fas fa-file-download"></i></button>
-                            </div>
-                         
-                      
-                    </div>
-                       <div class="file-wrapper text-white col-md-6 col-sm-12">
-                        <div class="file-icon col-4"><i class="far fa-file-word fa-4x"></i></div>
-                        <div class="file-info col-4">
-                                <div class="file-name ">Panderecki Recommendation</div>
-                                <div class="file-desc text-muted">
-                                    <div class="file-size">222 kb</div>
-                                    <div class="file-date">13-06-2019</div>
                                 </div>
-                                <button type="button" class="btn btn-secondary download-btn ">Download<i class="fas fa-file-download"></i></button>
+                               
                         </div>
                     </div>
-                    <div class="file-wrapper text-white col-md-6 col-sm-12">
-                            <div class="file-icon col-4"><i class="far fa-file-image fa-4x"></i></div>
-                            <div class="file-info col-4">
-                                    <div class="file-name">Concert_photo_1</div>
+                    <div class="file-wrapper text-white col-md-6 col-sm-12" data-aos="fade-left">
+                            <div class="file-icon col-2"><i class="far fa-file-image fa-4x"></i></div>
+                            <div class="file-info col-10">
+                                    <div class="file-name ">Photo_01</div>
                                     <div class="file-desc text-muted">
-                                        <div class="file-size">222 kb</div>
-                                        <div class="file-date">13-06-2019</div>
+                                        <div class="file-size">55 kb</div>
+                                        <div class="file-date">14-06-2019</div>
                                     </div>
-                                    <button type="button" class="btn btn-secondary download-btn ">Download<i class="fas fa-file-download"></i></button>
+                                    <div class="download-button">
+                                        <button type="button" class="btn btn-secondary download-btn ">Download<i class="fas fa-file-download"></i></button>
+                                    </div>
+                                   
                             </div>
-                         
-                      
-                    </div>
+                        </div>
+                        <div class="file-wrapper text-white col-md-6 col-sm-12" data-aos="fade-right">
+                                <div class="file-icon col-2"><i class="far fa-file-word fa-4x"></i></div>
+                                <div class="file-info col-10">
+                                        <div class="file-name ">Musician Recommendation</div>
+                                        <div class="file-desc text-muted">
+                                            <div class="file-size">128 kb</div>
+                                            <div class="file-date">13-06-2019</div>
+                                        </div>
+                                        <div class="download-button">
+                                            <button type="button" class="btn btn-secondary download-btn ">Download<i class="fas fa-file-download"></i></button>
+                                        </div>
+                                       
+                                </div>
+                            </div>
+                            <div class="file-wrapper text-white col-md-6 col-sm-12" data-aos="fade-left">
+                                    <div class="file-icon col-2"><i class="far fa-file-image fa-4x"></i></div>
+                                    <div class="file-info col-10">
+                                            <div class="file-name ">Concert Photo_01</div>
+                                            <div class="file-desc text-muted">
+                                                <div class="file-size">222 kb</div>
+                                                <div class="file-date">13-06-2019</div>
+                                            </div>
+                                            <div class="download-button">
+                                                <button type="button" class="btn btn-secondary download-btn ">Download<i class="fas fa-file-download"></i></button>
+                                            </div>
+                                           
+                                    </div>
+                                </div>
+                                <div class="file-wrapper text-white col-md-6 col-sm-12" data-aos="fade-left">
+                                        <div class="file-icon col-2"><i class="far fa-file-pdf fa-4x"></i></div>
+                                        <div class="file-info col-10">
+                                                <div class="file-name ">PDF FILE_1</div>
+                                                <div class="file-desc text-muted">
+                                                    <div class="file-size">222 kb</div>
+                                                    <div class="file-date">13-06-2019</div>
+                                                </div>
+                                                <div class="download-button">
+                                                    <button type="button" class="btn btn-secondary download-btn ">Download<i class="fas fa-file-download"></i></button>
+                                                </div>
+                                               
+                                        </div>
+                                    </div>
+                                    <div class="file-wrapper text-white col-md-6 col-sm-12" data-aos="fade-left">
+                                            <div class="file-icon col-2"><i class="far fa-file-pdf fa-4x"></i></div>
+                                            <div class="file-info col-10">
+                                                    <div class="file-name ">PDF FILE_1</div>
+                                                    <div class="file-desc text-muted">
+                                                        <div class="file-size">222 kb</div>
+                                                        <div class="file-date">13-06-2019</div>
+                                                    </div>
+                                                    <div class="download-button">
+                                                        <button type="button" class="btn btn-secondary download-btn ">Download<i class="fas fa-file-download"></i></button>
+                                                    </div>
+                                                   
+                                            </div>
+                                        </div>
             </div>
     </div>
-
+    
     <!-- CONTACT SECTION -->
     <div class="contact-section ptb-100" id="contact">
         <div class="container rounded" data-aos="fade-up">
