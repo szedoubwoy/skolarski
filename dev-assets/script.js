@@ -17,76 +17,51 @@ $(document).ready(function() {
     }
     
   });
+ // if($('.carousel-item').hasClass('active'))
+   // $(this).removeClass('active');
+  //check about me
+  function checkActive() {
+    if($('.carousel-item').hasClass('active'))
+    $('.carousel-item').removeClass('active');
+  }
 
+  function checkAboutMeClick(){
+    $('#bio').click(function() {
+      checkActive();
+      $('#bio_id').addClass('active');
+    });
+
+    $('#recommendations').click(function() {
+      checkActive();
+      $('#recommendations_id').addClass('active');
+    });
+
+    $('#reviews').click(function() {
+      checkActive();
+      $('#reviews_id').addClass('active');
+    });
+
+    $('#texts').click(function() {
+      checkActive();
+      $('#texts_id').addClass('active');
+    });
+  }
  
+  checkAboutMeClick();
 
   function init_carousel() {
     H = +($(window).height() /* -height here  */); // or $('.carousel-inner') as you want ...
     $('.carousel-inner').css('height', H + 'px');
   
 }
-window.onload = init_carousel;
-init_carousel();
-
-  
-  //albums hover effect
-  /*$('#rachmaninov .album-hover-wrapper').hover( function(){
-    $(this).css('opacity', '0.5').fadeOut('medium', 0.8);
-  },
-  function() {
-    $(this).css('opacity', '0').fadeOut('medium', 0.8);
-  });
-
-  $('#rachmaninov .album-hover-wrapper').hover( function(){
-    $(this).css('opacity', '0.5').fadeOut('medium', 0.8);
-  },
-  function() {
-    $(this).css('opacity', '0').fadeOut('medium', 0.8);
-  });
-
-  
-*/
- // $('#recordings').animatescroll();
-  /*$('.carousel').carousel({
-    interval: false,
-    wrap: false
-  })
-
-  var checkitem = function() {
-    var $this;
-    $this = $(".carousel");
-    if ($(".carousel .carousel-inner .carousel-item:first").hasClass("active")) {
-      $('#prevControl').hide();
-     // $this.children(".right").show();
-    } else if ($("#slideshow .carousel-inner .carousel-item:last").hasClass("active")) {
-      $('#nextControl').hide();
-    } else {
-      $('#prevControl').show();
-      $('#nextControl').show();
-    }
-  };
-  
-  checkitem();
-  
- */
-
+window.onload = function(){
   AOS.init({
     
   })
-
-//
-  $('.ekko-lightbox .modal-dialog .modal-content .modal-body .ekko-lightbox-nav-overlay').css("color", "red");
-
-  //$(this).on("click", '[data-toggle="lightbox"]', function(event) {
-   // event.preventDefault();
- //   $(this).ekkoLightbox({
-    
-      
-  //});
-
-
-    ////////////////
-  //});
+  AOS.refresh();
+  init_carousel;
+  init_carousel();
+} ;
 
 
 });

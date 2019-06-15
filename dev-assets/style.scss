@@ -69,7 +69,6 @@ a:focus, a:hover, a:visited {
   color: white;
   margin-top: -10px;
   .jumbotron{
-   // position: absolute;
     background-image: url("../images/home_img_1.JPG");
     background-size: cover;
     width: 100%;
@@ -78,12 +77,12 @@ a:focus, a:hover, a:visited {
       min-height : 900px;
       background-position: 70% 50%; 
      }
-   // .jumbotron-bg{
-     
-    //}
+     @include media-breakpoint-down(md){
+      min-height : 900px;
+      background-position: 80% 50%; 
+     }
   }
   .opinions-wrapper {
-   // position: absolute;
     padding-top:80px;
     p{
       font-size: 18px;
@@ -139,9 +138,10 @@ $bq_padding_l_next: 50px;
   box-shadow: 2px 9px 10px -3px rgba(0,0,0,0.4);
   
   .navbar-brand {
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       display: none;
     }
+   
   }
 
   
@@ -187,7 +187,7 @@ $bq_padding_l_next: 50px;
 
 
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md)  {
   margin-left: auto;
   margin-right: auto;
   background: #151515;;
@@ -216,22 +216,16 @@ $bq_padding_l_next: 50px;
     
   }
 }
-
-  //h1{
-    //color: gold;
-  //  @include media-breakpoint-down(sm){
-   //   display: none;
-   // }
-//  }
-
- 
-
   .navbar_left, .navbar_right{
     display: inline-flex;
     flex-direction: row;
 
     .nav-item{
       padding: 10px;
+      @include media-breakpoint-down(sm) {
+        padding-top: 9px;
+        padding-bottom: 9px;
+      }
     }
 
     @include media-breakpoint-down(sm) {
@@ -259,113 +253,88 @@ $bq_padding_l_next: 50px;
   
 }
 
-.dropdown {
-  /* 
-  &:hover {
-    .dropdown-menu {
-      background-color: #151515;
-      display: block;
-      .dropdown-item {
-        color: darken($color: white, $amount: 20);
-        background-color: #151515;
-        &:hover {
-          color: white;
-        }
-      }
-    }
-  } 
-  */
-}
-
 /////////////////ABOUT ME \\\\\\\\\\\\\\\\\\\\\
 
-.carousel-indicators {
-  @include media-breakpoint-down(sm) {
-    //  width: 100%;
-   // left:auto;
-  //right:20px;
-  //margin-right:0;
- // width:auto; 
-    }
-  
-}
 .about-me-section {
-  
   .carousel {
-   // width: 1000px; 
-    height: 900px;
-    margin: 0 auto;
-    @include media-breakpoint-down(sm) {
-    //  width: 100%; 
-    //  max-width: 400px !important;
-    height: 1500px
+  
+    .carousel-control-next {
+      bottom: 100%;
+      margin-top: -110px;
+      right: -5%;
+      @include media-breakpoint-up(lg) {
+        right: -15%;
+        bottom: 40%;
+        
+       }
+      .carousel-control-next-icon {
+           background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23131313' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+
+           @include media-breakpoint-up(lg) {
+
+            width: 50px;
+            height: 50px;
+           }
+          
+        }
     }
+   
+    .carousel-control-prev {
+      bottom: 100%;
+      margin-top: -110px;
+      left: -5%;
+      @include media-breakpoint-up(lg) {
+        left: -15%;
+        bottom: 40%;
+       }
+      .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23131313' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+        
+        @include media-breakpoint-up(lg) {
+          width: 50px;
+          height: 50px;
+         }
+      }
+    }
+    
+    width: 100%; 
+    height: 600px;
+    @include media-breakpoint-up(lg) {
+      height: 800px;
+    }
+   .carousel-item {
+    @include media-breakpoint-down(sm) {
+      overflow: auto;
+      height:500px;
+    }
+
+    p {
+      display: block;
+     // word-wrap: break-word;
+      text-align: center;
+      font-size: 16px;
+    }
+   }
+      }
+      
   }
+  
 
   .biography-section {
-    margin: 0.85em 0;
+
     p {
       display: block;
       font-family: Helvetica, Arial, sans-serif;
       @include media-breakpoint-down(sm) {
-        //  width: 100%; 
-        //  max-width: 400px !important;
-     //   height: 100%;
-     //   width: 100%;
+        
         }
-     // margin-block-start: 1em;
-     // margin-block-end: 1em;
-    //  margin-inline-start: 0px;
-    //  margin-inline-end: 0px;
+
       
     }
     @include media-breakpoint-down(sm) {
-      //  width: 100%; 
-      //  max-width: 400px !important;
-      height: 100%;
-      width: 100%;
+     
       }
   }
-
-} 
-.carousel .carousel-control { visibility: hidden; }
-.fixed-top {
- // width: 75%;
- // margin-left: auto;
- // margin-right: auto;
-}
-
-//CAROUSEL SETTINGS ABOUT ME
-$carousel_control_space: -140px;
-.carousel-control-prev-icon {
-//@error  background-image: url("https://icons-for-free.com/iconfiles/png/512/keyboard+arrow+left+48px-131985225817132836.png");
- // width: 100%;
-  //height: 120px;
-  @include media-breakpoint-down(sm) {
-  // display: none;
-   //position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  max-width: 100%;
-  //  height: 100%;
-  }
-}
-
-.carousel-control-next-icon {
- // background-image: url("https://icons-for-free.com/iconfiles/png/512/keyboard+arrow+right+48px-131985225841288821.png");
-  //width: 100%;
- // height: 140px;
-  @include media-breakpoint-down(sm) {
-  //  display: none;
-   }
-}
-.carousel-control-prev {
- // margin-left: $carousel_control_space;
-}
-
-.carousel-control-next {
- // margin-right: $carousel_control_space;
-}
 
 
 #about_me_2 {
@@ -384,11 +353,10 @@ $carousel_control_space: -140px;
 //next sectio ntest
 .next-section {
   background-image: url("https://wallpaperplay.com/walls/full/2/f/e/200789.jpg");
- // background-size: cover;
   width: 100%;
   min-height : 600px;
   opacity: 0.95;
- // background-image: url('../images/blurred.jpg');
+ 
   background-attachment: fixed;
   background-position: 50% -51.7904px;
 
@@ -396,17 +364,11 @@ $carousel_control_space: -140px;
     width: 100%;
     min-height : 300px;
     opacity: 0.95;
-   // background-image: url('../images/blurred.jpg');
+  
     background-attachment: fixed;
     background-position: 50% -51.7904px;
    }
 }
-
-// background: #ddd;
-//     background: linear-gradient(#ddd, #e8e8e8);
-//     font-family: 'Open Sans', sans-serif;
-//     height: 100vh;
-//     margin:0;
 
 .recordings-section {
   padding-top: 100px;
@@ -415,15 +377,12 @@ $carousel_control_space: -140px;
     h2 {
       color: #dcdcdc;
       padding-bottom: 100px;
-      //font-family: 'Open Sans', sans-serif;
     }
     
     .recordings-wrapper {
       display: flex;
       justify-content: center;
-     // margin-left: -40px;
       .album-wrapper {
-       // margin-left: 80px;
         width: 350px;
         height: 350px;
         -webkit-box-shadow: -2px 7px 12px 8px rgba(0,0,0,0.75);
@@ -558,16 +517,12 @@ $carousel_control_space: -140px;
         
     }
     img {
-     // margin: 0;
-     // data-max-width="280" data-max-height="200"
      width: 250px;
      height: 180px;
-
     }
 
     .label-image-hover {
       position:absolute;
-      //display: block;
       cursor: pointer;
       width: 250px;
       height: 180px;
@@ -589,9 +544,7 @@ $carousel_control_space: -140px;
       }
     }
 
-    @include media-breakpoint-down(sm) {
-     // display: flex;
-     // justify-content: center;
+    @include media-breakpoint-down(md) {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 20px;
@@ -605,8 +558,6 @@ $carousel_control_space: -140px;
 }
 
 .media-section {
- // padding-top: 100px;
- // padding-bottom: 100px;
   background: url('../images/gallery/gallery_5.JPG');
  
   .text-title-wrapper {
@@ -626,12 +577,20 @@ $carousel_control_space: -140px;
         color: lighten($color: #151515, $amount: 30);
       }
       @include media-breakpoint-down(sm){
+        color: white;
         &:hover {
           color: white;
         }
         font-size: 24px;
         padding-top: 0px;
         padding-bottom: 30px;
+       }
+       @include media-breakpoint-down(md){
+        color: lighten($color: #151515, $amount: 50);
+        &:hover {
+          color: white;
+        }
+       
        }
     }
   }
@@ -658,7 +617,7 @@ $carousel_control_space: -140px;
   text-align: center;
   h2{
     color: white;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       padding-left: 22px;
     }
 
@@ -683,7 +642,7 @@ $carousel_control_space: -140px;
       }
     }
    
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(md){
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -707,9 +666,9 @@ $carousel_control_space: -140px;
     height: 100px;
     background: #dcdcdc;
     
-    @include media-breakpoint-down(sm){
-      display: flex;
-      justify-content: flex-start;
+    @include media-breakpoint-down(md){
+     // display: flex;
+      justify-content: center;
       flex-direction: column;
       text-align: left;
       width: 350px;
@@ -749,7 +708,7 @@ $carousel_control_space: -140px;
     .file-icon {
       padding-top: 10px;
       padding-right: 100px;
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(md){
         padding-right: -20px;
         margin-top: -12px;
       }
@@ -758,7 +717,7 @@ $carousel_control_space: -140px;
     .file-info {
       padding-top: 5px;
       margin-left: -90px;
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(md){
         margin-left: -140px;
       }
 
@@ -768,7 +727,7 @@ $carousel_control_space: -140px;
         white-space: nowrap;
         font-weight: bold;
         padding-left: 100px;
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(md){
           padding-left: 40px;
           padding-bottom: 16px;
           margin-top: -16px;
@@ -780,7 +739,7 @@ $carousel_control_space: -140px;
         font-size: 12px;
         padding-left: 90px;
 
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(md){
           padding-bottom: 20px;
           margin-top: -18px;
           margin-left: -50px;
@@ -797,7 +756,7 @@ $carousel_control_space: -140px;
 
       .download-button {
         padding-top: 35px;
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(md){
           margin-left: -60px;
           margin-top: -18px;
         }
@@ -822,7 +781,6 @@ $carousel_control_space: -140px;
   padding-top: 100px;
   padding-bottom: 100px;
   h2{
-   // color: #151515;;
    color: white;
   }
   p {
@@ -830,6 +788,7 @@ $carousel_control_space: -140px;
   }
   li, label{
     color: white;
+   // padding-right: 20px;
   }
   .container {
     background: #151515;
@@ -846,9 +805,6 @@ $carousel_control_space: -140px;
   .contact-forms-wrapper {
     @include media-breakpoint-down(sm){
       padding-right: 45px;
-     // display: flex;
-     // justify-content: center;
-     // flex-direction: column;
      text-align: center;
      form{
       text-align: center;

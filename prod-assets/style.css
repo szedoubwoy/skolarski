@@ -49,6 +49,10 @@ a:focus, a:hover, a:visited {
       .hero .jumbotron {
         min-height: 900px;
         background-position: 70% 50%; } }
+    @media (max-width: 991.98px) {
+      .hero .jumbotron {
+        min-height: 900px;
+        background-position: 80% 50%; } }
   .hero .opinions-wrapper {
     padding-top: 80px; }
     .hero .opinions-wrapper p {
@@ -99,7 +103,7 @@ a:focus, a:hover, a:visited {
   -webkit-box-shadow: 2px 9px 10px -3px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 2px 9px 10px -3px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 9px 10px -3px rgba(0, 0, 0, 0.4); }
-  @media (max-width: 767.98px) {
+  @media (max-width: 991.98px) {
     .navbar-default .navbar-brand {
       display: none; } }
   @media (max-width: 767.98px) {
@@ -128,7 +132,7 @@ a:focus, a:hover, a:visited {
         background-color: #151515; }
         .navbar-default .dropdown:hover .dropdown-menu .dropdown-item:hover {
           color: white; }
-  @media (max-width: 767.98px) {
+  @media (max-width: 991.98px) {
     .navbar-default {
       margin-left: auto;
       margin-right: auto;
@@ -156,6 +160,10 @@ a:focus, a:hover, a:visited {
     flex-direction: row; }
     .navbar-default .navbar_left .nav-item, .navbar-default .navbar_right .nav-item {
       padding: 10px; }
+      @media (max-width: 767.98px) {
+        .navbar-default .navbar_left .nav-item, .navbar-default .navbar_right .nav-item {
+          padding-top: 9px;
+          padding-bottom: 9px; } }
     @media (max-width: 767.98px) {
       .navbar-default .navbar_left, .navbar-default .navbar_right {
         display: flex;
@@ -169,42 +177,52 @@ a:focus, a:hover, a:visited {
 .dropdown-toggle:after {
   display: none; }
 
-.dropdown {
-  /* 
-  &:hover {
-    .dropdown-menu {
-      background-color: #151515;
-      display: block;
-      .dropdown-item {
-        color: darken($color: white, $amount: 20);
-        background-color: #151515;
-        &:hover {
-          color: white;
-        }
-      }
-    }
-  } 
-  */ }
-
 .about-me-section .carousel {
-  height: 900px;
-  margin: 0 auto; }
-  @media (max-width: 767.98px) {
+  width: 100%;
+  height: 600px; }
+  .about-me-section .carousel .carousel-control-next {
+    bottom: 100%;
+    margin-top: -110px;
+    right: -5%; }
+    @media (min-width: 992px) {
+      .about-me-section .carousel .carousel-control-next {
+        right: -15%;
+        bottom: 40%; } }
+    .about-me-section .carousel .carousel-control-next .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23131313' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
+      @media (min-width: 992px) {
+        .about-me-section .carousel .carousel-control-next .carousel-control-next-icon {
+          width: 50px;
+          height: 50px; } }
+  .about-me-section .carousel .carousel-control-prev {
+    bottom: 100%;
+    margin-top: -110px;
+    left: -5%; }
+    @media (min-width: 992px) {
+      .about-me-section .carousel .carousel-control-prev {
+        left: -15%;
+        bottom: 40%; } }
+    .about-me-section .carousel .carousel-control-prev .carousel-control-prev-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23131313' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e"); }
+      @media (min-width: 992px) {
+        .about-me-section .carousel .carousel-control-prev .carousel-control-prev-icon {
+          width: 50px;
+          height: 50px; } }
+  @media (min-width: 992px) {
     .about-me-section .carousel {
-      height: 1500px; } }
-
-.about-me-section .biography-section {
-  margin: 0.85em 0; }
-  .about-me-section .biography-section p {
-    display: block;
-    font-family: Helvetica, Arial, sans-serif; }
+      height: 800px; } }
   @media (max-width: 767.98px) {
-    .about-me-section .biography-section {
-      height: 100%;
-      width: 100%; } }
+    .about-me-section .carousel .carousel-item {
+      overflow: auto;
+      height: 500px; } }
+  .about-me-section .carousel .carousel-item p {
+    display: block;
+    text-align: center;
+    font-size: 16px; }
 
-.carousel .carousel-control {
-  visibility: hidden; }
+.biography-section p {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif; }
 
 #about_me_2 {
   font-size: 20px; }
@@ -348,7 +366,7 @@ a:focus, a:hover, a:visited {
         padding: 50px; }
       .gallery-section .gallery-wrapper .gallery-image-wrapper .label-image-hover a {
         cursor: pointer; }
-    @media (max-width: 767.98px) {
+    @media (max-width: 991.98px) {
       .gallery-section .gallery-wrapper .gallery-image-wrapper {
         margin-left: auto;
         margin-right: auto;
@@ -371,9 +389,15 @@ a:focus, a:hover, a:visited {
         color: #626262; }
       @media (max-width: 767.98px) {
         .media-section .text-title-wrapper h5 {
+          color: white;
           font-size: 24px;
           padding-top: 0px;
           padding-bottom: 30px; }
+          .media-section .text-title-wrapper h5:hover {
+            color: white; } }
+      @media (max-width: 991.98px) {
+        .media-section .text-title-wrapper h5 {
+          color: #959595; }
           .media-section .text-title-wrapper h5:hover {
             color: white; } }
 
@@ -391,7 +415,7 @@ a:focus, a:hover, a:visited {
   text-align: center; }
   .downloads-section h2 {
     color: white; }
-    @media (max-width: 767.98px) {
+    @media (max-width: 991.98px) {
       .downloads-section h2 {
         padding-left: 22px; } }
   .downloads-section p {
@@ -406,7 +430,7 @@ a:focus, a:hover, a:visited {
       height: auto; }
       .downloads-section .category-wrapper .category-btn i {
         padding-left: 4px; }
-    @media (max-width: 767.98px) {
+    @media (max-width: 991.98px) {
       .downloads-section .category-wrapper {
         display: flex;
         justify-content: center;
@@ -423,10 +447,9 @@ a:focus, a:hover, a:visited {
     width: 500px;
     height: 100px;
     background: #dcdcdc; }
-    @media (max-width: 767.98px) {
+    @media (max-width: 991.98px) {
       .downloads-section .file-wrapper {
-        display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         flex-direction: column;
         text-align: left;
         width: 350px;
@@ -448,14 +471,14 @@ a:focus, a:hover, a:visited {
     .downloads-section .file-wrapper .file-icon {
       padding-top: 10px;
       padding-right: 100px; }
-      @media (max-width: 767.98px) {
+      @media (max-width: 991.98px) {
         .downloads-section .file-wrapper .file-icon {
           padding-right: -20px;
           margin-top: -12px; } }
     .downloads-section .file-wrapper .file-info {
       padding-top: 5px;
       margin-left: -90px; }
-      @media (max-width: 767.98px) {
+      @media (max-width: 991.98px) {
         .downloads-section .file-wrapper .file-info {
           margin-left: -140px; } }
       .downloads-section .file-wrapper .file-info .file-name {
@@ -464,7 +487,7 @@ a:focus, a:hover, a:visited {
         white-space: nowrap;
         font-weight: bold;
         padding-left: 100px; }
-        @media (max-width: 767.98px) {
+        @media (max-width: 991.98px) {
           .downloads-section .file-wrapper .file-info .file-name {
             padding-left: 40px;
             padding-bottom: 16px;
@@ -473,7 +496,7 @@ a:focus, a:hover, a:visited {
         padding-bottom: 8px;
         font-size: 12px;
         padding-left: 90px; }
-        @media (max-width: 767.98px) {
+        @media (max-width: 991.98px) {
           .downloads-section .file-wrapper .file-info .file-desc {
             padding-bottom: 20px;
             margin-top: -18px;
@@ -485,7 +508,7 @@ a:focus, a:hover, a:visited {
           display: inline-block; }
       .downloads-section .file-wrapper .file-info .download-button {
         padding-top: 35px; }
-        @media (max-width: 767.98px) {
+        @media (max-width: 991.98px) {
           .downloads-section .file-wrapper .file-info .download-button {
             margin-left: -60px;
             margin-top: -18px; } }

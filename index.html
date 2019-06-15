@@ -32,10 +32,10 @@
                                               About Me
                                           </a>
                                           <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll({scrollSpeed:1900});">Bio</a>
-                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll({scrollSpeed:1900});">Recommendations</a>
-                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll({scrollSpeed:1900});">Selected reviews</a>
-                                              <a class="dropdown-item" href="#" onclick="$('#about').animatescroll({scrollSpeed:1900});">Texts</a>   
+                                              <a id="bio" class="dropdown-item" href="#bio_id" onclick="$('#about').animatescroll({scrollSpeed:1900});">Bio</a>
+                                              <a id="recommendations" class="dropdown-item" href="#" onclick="$('#about').animatescroll({scrollSpeed:1900});">Recommendations</a>
+                                              <a id="reviews" class="dropdown-item" href="#" onclick="$('#about').animatescroll({scrollSpeed:1900});">Selected reviews</a>
+                                              <a id="texts" class="dropdown-item" href="#" onclick="$('#about').animatescroll({scrollSpeed:1900});">Texts</a>   
                                           </div>
                                   </li>
                                   <li class="nav-item" onclick="$('#recordings').animatescroll({padding: 60, scrollSpeed:1900});">
@@ -77,26 +77,26 @@
           <div class="hero text-center">
               <div class="jumbotron jumbotron-fluid">
                 <!-- <div class="jumbotron-bg"></div> -->
-                <div class="opinions-wrapper text-left ">
+                <div class="opinions-wrapper text-left" data-aos-once="true">
                     <blockquote id="bq_1" class="blockquote" data-aos="fade-down-right">
                         <p class="mb-0">“Great virtuoso of the piano.”</p>
                         <footer class="blockquote-footer">Krzysztof Penderecki, <cite title="Source Title">March 2016</cite></footer>
                     </blockquote>
-                    <blockquote id="bq_2" class="blockquote pt-4" data-aos="fade-down-right">
+                    <blockquote id="bq_2" class="blockquote pt-4" data-aos="fade-down-right"  data-aos-delay="100">
                         <p class="mb-0">“He plays like young Sviatoslav Richter.”</p>
                         <footer class="blockquote-footer">MDR Figaro, <cite title="Source Title">April 2016</cite></footer>
                     </blockquote>
-                    <blockquote id="bq_3" class="blockquote pt-4" data-aos="fade-down-right">
+                    <blockquote id="bq_3" class="blockquote pt-4" data-aos="fade-down-right" data-aos-delay="200">
                         <p class="mb-0">"The golden age of pianism comes to mind when I hear Konrad Skolarski play."</p>
                         <footer class="blockquote-footer">Prof. Peter Feuchtwanger</footer>
                     </blockquote>
-                    <blockquote id="bq_4" class="blockquote pt-4" data-aos="fade-down-right">
+                    <blockquote id="bq_4" class="blockquote pt-4" data-aos="fade-down-right"  data-aos-delay="300">
                         <p class="mb-0">"It is very seldom to hear a musician who can conjure up such lush,<br> singing and richly shaded sound.
                             (…)His lyrical-dramatic interpretations <br>are very personal and one will remember and recognize them
                             even<br> from thousand other pianists."</p>
                         <footer class="blockquote-footer">Prof. Pavel Gililov</footer>
                     </blockquote>
-                    <blockquote id="bq_5" class="blockquote pt-4" data-aos="fade-down-right">
+                    <blockquote id="bq_5" class="blockquote pt-4" data-aos="fade-down-right" data-aos-delay="400">
                         <p class="mb-0">„He is a world class musician with a distinct voice, astonishing technical ability,<br> beautiful tone and
                             charismatic personality. (…) one of the leading pianists in the world today.”</p>
                         <footer class="blockquote-footer">Prof. Peter Feuchtwanger</footer>
@@ -111,125 +111,123 @@
             <h2 class="section-title text-center">About Konrad</h2>
             <div class="title-line"></div>
             <div class="biography-section pt-3">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-wrap="false" data-interval="false">
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                    <p class="text-muted text-center">BIOGRAPHY</p>  
-                                    <p>As a concert pianist Konrad Skolarski is known for his extraordinary technique
-                                            and recognizable own style of interpretations, as well as for interesting and
-                                            sophisticated piano repertoire.
-                                            Among the most recent highlits it is worth to mention his rendition of
-                                            Rachmaninov Piano Concerto No.2 under Mikhail Jurowski in Polish National
-                                            Philharmony, recitals at the 20th Beethoven Easter Festival, 30th Izmir
-                                            International Festival, Beethoven Piano Concerto No.2 under Avner Biron
-                                            (Camerata Jerusalem).</p>
-                        
-                                    <p>In November 2017 Konrad Skolarski gave a very successful tour in the US,
-                                            performing recitals in New York and Buffalo, as well as 2 nd Chopin piano
-                                            concerto with Buffalo Philharmonic under the baton of Maestra JoAnn Falletta.
-                                            His performance of Chopin 2 nd concerto there was acclaimed “revelation” and
-                                            “hit” and was included in the promotional CD of Buffalo Philharmonic
-                                            Orchestra.
-                                            In April 2017 the pianist performed the Polish premiere of Rodion Shchedrin 1st
-                                            Piano concerto with National Polish Radio Symphony Orhcestra in Katowice
-                                            under the baton of Alexander Humala</p>
-                                    <p>Konrad Skolarski started to learn to play the piano at the age of 4 under
-                                            Professor Marek Mizera. At the age of 9, he performed Concerto in F Minor by
-                                            J.S. Bach with the famous orchestra Concerto Avenna. At the age of 13, he
-                                            became a laureate of the Professor Ludwik Stefański Competition for Young
-                                            Pianists. Between 1995 and 1998, he studied under Janusz Olejniczak. He
-                                            developed his skills on private and master classes with such famous musicians
-                                            as: Alexander Jenner, Sergio Perticarolli, Hiroko Nakamura, Oxana
-                                            Yablonskaya (Julliard School of Music) and Vladimir Krainev.
-                                            From 1998–2005, he studied under the Russian pianist Olga Rusina. In 2001 he
-                                            won the 1 st  award at the 3 rd  International P. Tchaikovsky Competition in Spain
-                                            (Huesca). In 2002 he recorded his debut album with pieces by Fryderyk Chopin,
-                                            Franz Liszt, Sergei Rachmaninoff, and Sergei Prokofiev. The album was
-                                            released by the Universal Company in 2005 and had very favorable reviews.
-                                            In 2007, Konrad Skolarski graduated from the Fryderyk Chopin Academy of
-                                            Music in Warsaw, class of Professor Alicja Paleta-Bugaj, and in the period of
-                                            2007–2010 he was a student at a master class of Pavel Gililov (postgraduate
-                                            studies: “Konzertexamen”).
-                                            By working under many Russian pianists and pedagogues, Konrad Skolarski had
-                                            a chance to familiarize with two centres of the famous Russian piano schools –
-                                            the “Leningrad” school and the “Moscow” one.</p>
-                                            <p>Since 2010 Konrad Skolarski has been a student of legendary Prof. Peter
-                                                    Feuchtwanger, the mentor of many distinguished pianists, including Martha
-                                                    Argerich, Nelson Freire or Shura Cherkassky.
-                                                    Konrad Skolarski signed a recording contract with DUX. In 2012, the company
-                                                    released two albums with pieces by Rachmaninoff, Scriabin, Prokofiev, and
-                                                    piano miniatures (Bach-Siloti, Brahms, Chopin, Grieg, Medtner, Tchaikovsky,
-                                                    Tchaikovsky-Pabst, Rachmaninoff, Scriabin, Saint-Saëns/Godowsky). In 2012
-                                                    his solo CD with Rachmaninov, Scriabin and Prokofiew was awarded by the
-                                                    international music critics – Diapason “5” Award and nomination for Fryderyk
-                                                    Award, and his renditions of Prokofiev’s and Rachmaninov’s Sonatas are
-                                                    compared by critics to legendary recordings by Sviatoslav Richter or Emil
-                                                    Gilels.
-                                                    He teaches piano at the Fryderyk Chopin University of Music in Warsaw. His
-                                                    students are laureates or semifinalists at the international piano competitions,
-                                                    such as Busoni, Warsaw Chopin Competition, San Marino, Hannover Chopin
-                                                    Competition, or Yamaha Scholarship to name just a few.
-                                                    He gives masterclasses all around the world. Apart from that he also served as a
-                                                    jury member of international piano competitions.
-                                                    The artist is interested in painting, poetry, psychology and philosophy.</p>
-                              </div>
-                              <div class="carousel-item">
-                                    <p class="text-muted text-center">RECOMMENDATIONS</p>  
-                                    <blockquote id="about_me_2" class="blockquote">
-                                            <p> We would like to recommend one of the most talented Polish pianists, Mr. Konrad Skolarski, born in Warsaw, in 1980.
-                                                    The pianist is known for his extraordinary technique and recognizable own style of interpretations, as well as for interesting and sophisticated piano repertoire. 
-                                                    Recently he has performed the Polish premiere of Rodion Shchedtrin 1st Piano concerto with the National Polish Radio Symphony Orchestra in Katowice under the baton of Alexander Humala.
-                                                    In 2017 Konrad Skolarski gave recitals and masterclass in Buenos Aires, receiving enthusiastic reviews. In November 2017 Mr. Skolarski gave very successful tour in the United States, performing
-                                                    recitals in New York and Buffalo, as well as the 2nd Chopin piano concerto with Buffalo Philharmonic Orchestra under the baton of Maestra JoAnn Falletta.
-                                                    His performance of Chopin 2nd concerto there was acclaimed a "revelation" and a "hit" and was included in the CD of Buffalo Philharmonic Orchestra.
-                                                    
-                                                    Konrad Skolarski has been a student of world-famous pianist and pedagogue, Prof. Pavel Gililov, who says about the artists:
-                                                    "It is very seldom to hear a musician who can conjure up such lush, singing and richly shaded sound. (...)His lyrical-dramatic interpretations are very personal and one will remember and recognize them even from thousand other pianists."
-                                                    Mr. Skolarski has been also a student of legendary Prof. Peter Feuchtwanger in London, who has worked with many distinguished pianists, including Martha Argerich, Nelson Freire or Shura Cherkassky.
-                                                    In 2012 his solo CD with Rachmaninov, Scriabin and Prokofiew was awarded by the international music critics - Diapason "5" Award.
-                                                    Konrad Skolarski gave concerts in Germany (Klavierfestival Ruhr), Czech Republic, Spain, Serbia, Belgium, Switzerland, Turkey, Argentina, United States of America, Great Britain, Japan. After his recital at the 20th Ludwig van Beethoven Easter Festival in Warsaw MDR
-                                                    Figaro said: "He sounds like young Sviatoslav Richter". 
-                                                    We highly recommend Mr. Konrad Skolarski as a concert pianist.
-                                                </p>
-                                            <footer class="blockquote-footer">Elżbieta Penderecki, Krzysztof Penderecki</footer>
-                                        </blockquote>
-                                        <div class="text-center pt-2"><button type="button" class="btn btn-dark ">READ MORE</button></div>
-                              </div>
-                              <div class="carousel-item">
-                                    <p class="text-muted text-center">SELECTED REVIEWS</p>  
-                                    <blockquote id="about_me_3" class="blockquote">
-                                            <p> Polish pianist Konrad Skolarski (b. 1980) is a prizewinner in several international competitions and a former student of Pavel Gililov and Olga Rusina. His first CD, issued in 2005 on the Universal Poland label, was a collection of works by Chopin, Liszt, Rachmaninov and Prokofiev. If I can judge by the performances on this new CD on the Dux label, I would say Skolarski may well have a major career on the concert stage.
-                                                    The version of the Rachmaninov Second Sonata that Skolarski chooses is the original, from 1913, and while it is always good to have a fine recording of it, the revised rendition (1931) is the better of the two. The earlier version is seven or eight minutes longer and sometimes seems a bit padded with dispensable diversions. At any rate, both versions are worthy of attention, and this account of the original is excellent. Van Cliburn's scorching 1960 recording of it has been a benchmark, but now Skolarski, with a more lush and relaxed approach, offers nearly as compelling a performance, and in much better sound. Where Cliburn turns in a white-heat rendition in terrible sound reproduction from a live Moscow performance, Skolarski lets the lyrical sections gush with passion and rich Romanticism, the whole captured in excellent sonics by Dux engineers. Skolarski plays the faster music well too, and overall shows he has the full measure of this challenging work.
-                                                    In the three preludes from Op. 23 he is equally convincing. In #3 Skolarski's tempos are centrist and he tends to balance both a stately and melancholy sense to offer a splendid rendition of this fine piece. In #6 he phrases the music with senstivity in rich tones to deliver a meltingly beautiful account, while in #8 he turns up the passion with a restlessness in the accompanying runs, deftly imparting a youthful sort of longing. In the Elegy, #1 from the Op. 3 Morceaux de Fantasie, Skolarski paces the music very deliberately and comes across a little stiffly. Other pianists have offered more supple accounts, though Skolarski's effort here does effectively point up the darker, sadder elements here.
-                                                    The Scriabin Op. 28 Fantasy in B minor is filled with passion as Skolarski points up the Romantic side of the music. Some might complain his dynamics are tilted a bit to the loud side, but he makes a good case for his more epic approach.
-                                                    Skolarski's Prokofiev Second Sonata is well thought out, featuring wide-ranging dynamics and much subtle nuancing. Notice how his buildup in the first movement begins deliberately and with considerable restraint, and then so powerfully explodes at the climax. He adroitly conveys the humor and menace in the Scherzo, and his third movement Andante effectively captures the dark hypnotic character of the music while bringing out inner voices from the bass often suppressed in other performances. His finale is fleet, light and crisp, catching all the Prokofiev menace and wit to yield one of the finest accounts of this movement ever recorded. True, Skolarski sometimes tends to accent certain notes without sufficent purpose, but overall he is still very effective. While there have been excellent renditions of this work by Richter, Graffman, Glemser, Raekallio, Douglas and others, this one by Skolarski is a strong competitor with them. Again, the sound reproduction here and throughout the disc is first-rate. This is a splendidly played collection that should appeal to those with an interest in late 19th- and early 20th-century piano music.
-                                                </p>
-                                            <footer class="blockquote-footer">Robert Cummings,<cite title="Source Title"> classical.net @ 2013</cite></footer>
-                                    </blockquote>
-                                    <div class="text-center pt-2"><button type="button" class="btn btn-dark ">READ MORE</button></div>      
-                              </div>
-                              <div class="carousel-item">
-                                    <p class="text-muted text-center">TEXTS</p>  
-                                    <blockquote id="about_me_4 " class="blockquote text-center">
-                                            <h4>"Technique".</h4>
-                                            <h5>(extract from the river interview with Peter Feuchtwanger. The book will be published soon)</h5>
-                                            <p> K.S.  (…)Basically, all about the so called technique has been said. All solutions to technical problems lie in musical content. I hope it's obvious by now. Nevertheless, we can say a bit more—especially for those readers who don't see any relation between what is hidden between the notes and technique in the common sense. I came across views that the things we discussed earlier are “loftier matters”, things one should deal with at a later stage in one's education. Many pedagogues are of the opinion one should first handle the craft, the technique. The tone, the phrase, the form and finally the spirit of the music become matters the student works on first during his studies. This view results in an overemphasis of the means at the cost of the goals, and it is the goals that should determine the means. Let's quote Neuhaus' maxim again: what defines how. The essence of art and science is not the method, the apparatus, the tool. Technique and brilliance are not an equivalent of creativity. Somebody who separates the technical and the musical elements reminds of the individual described by Freud who spent all his time cleaning his glasses instead of putting them on and looking at the world. (…)Heinrich Neuhaus explains the etymology of the word technique (saying it originates from the Greek word τέχνη, which means art). In my opinion it is a huge simplification. Such a literal translation does not cover the whole problem. The philosopher Martin Heidegger goes much deeper. Examining the content of the lecture, which he gave in 1953 in Münich, we realize that we cannot consider the word techne in isolation from words such as poiesis and thesis. Heidegger, after analyzing the correlations between the words techne, poiesis and thesis, concludes that in fact technique means revealing, evoking, bringing out of concealment into unconcealment. Heidegger once said that “art is the becoming and happening of truth”. So technique is about revealing, evoking, about poetic manifestation. 
-                                            </p>
-                                        </blockquote>
-                                        <div class="text-center pt-2"><button type="button" class="btn btn-dark ">READ MORE</button></div>
-                              </div>
-                           
-                            </div>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="0">
+                        <div class="carousel-inner">
+                                <div id="bio_id" class="carousel-item active">
+                                        <p class="text-muted text-center">BIOGRAPHY</p>  
+                                        <p>As a concert pianist Konrad Skolarski is known for his extraordinary technique
+                                                and recognizable own style of interpretations, as well as for interesting and
+                                                sophisticated piano repertoire.
+                                                Among the most recent highlits it is worth to mention his rendition of
+                                                Rachmaninov Piano Concerto No.2 under Mikhail Jurowski in Polish National
+                                                Philharmony, recitals at the 20th Beethoven Easter Festival, 30th Izmir
+                                                International Festival, Beethoven Piano Concerto No.2 under Avner Biron
+                                                (Camerata Jerusalem).</p>
                             
-                            <a class="carousel-control-prev" id="prevControl" href="#carouselExampleControls" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" id="nextControl" href="#carouselExampleControls" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                </div>
+                                        <p>In November 2017 Konrad Skolarski gave a very successful tour in the US,
+                                                performing recitals in New York and Buffalo, as well as 2 nd Chopin piano
+                                                concerto with Buffalo Philharmonic under the baton of Maestra JoAnn Falletta.
+                                                His performance of Chopin 2 nd concerto there was acclaimed “revelation” and
+                                                “hit” and was included in the promotional CD of Buffalo Philharmonic
+                                                Orchestra.
+                                                In April 2017 the pianist performed the Polish premiere of Rodion Shchedrin 1st
+                                                Piano concerto with National Polish Radio Symphony Orhcestra in Katowice
+                                                under the baton of Alexander Humala</p>
+                                        <p>Konrad Skolarski started to learn to play the piano at the age of 4 under
+                                                Professor Marek Mizera. At the age of 9, he performed Concerto in F Minor by
+                                                J.S. Bach with the famous orchestra Concerto Avenna. At the age of 13, he
+                                                became a laureate of the Professor Ludwik Stefański Competition for Young
+                                                Pianists. Between 1995 and 1998, he studied under Janusz Olejniczak. He
+                                                developed his skills on private and master classes with such famous musicians
+                                                as: Alexander Jenner, Sergio Perticarolli, Hiroko Nakamura, Oxana
+                                                Yablonskaya (Julliard School of Music) and Vladimir Krainev.
+                                                From 1998–2005, he studied under the Russian pianist Olga Rusina. In 2001 he
+                                                won the 1 st  award at the 3 rd  International P. Tchaikovsky Competition in Spain
+                                                (Huesca). In 2002 he recorded his debut album with pieces by Fryderyk Chopin,
+                                                Franz Liszt, Sergei Rachmaninoff, and Sergei Prokofiev. The album was
+                                                released by the Universal Company in 2005 and had very favorable reviews.
+                                                In 2007, Konrad Skolarski graduated from the Fryderyk Chopin Academy of
+                                                Music in Warsaw, class of Professor Alicja Paleta-Bugaj, and in the period of
+                                                2007–2010 he was a student at a master class of Pavel Gililov (postgraduate
+                                                studies: “Konzertexamen”).
+                                                By working under many Russian pianists and pedagogues, Konrad Skolarski had
+                                                a chance to familiarize with two centres of the famous Russian piano schools –
+                                                the “Leningrad” school and the “Moscow” one.</p>
+                                                <p>Since 2010 Konrad Skolarski has been a student of legendary Prof. Peter
+                                                        Feuchtwanger, the mentor of many distinguished pianists, including Martha
+                                                        Argerich, Nelson Freire or Shura Cherkassky.
+                                                        Konrad Skolarski signed a recording contract with DUX. In 2012, the company
+                                                        released two albums with pieces by Rachmaninoff, Scriabin, Prokofiev, and
+                                                        piano miniatures (Bach-Siloti, Brahms, Chopin, Grieg, Medtner, Tchaikovsky,
+                                                        Tchaikovsky-Pabst, Rachmaninoff, Scriabin, Saint-Saëns/Godowsky). In 2012
+                                                        his solo CD with Rachmaninov, Scriabin and Prokofiew was awarded by the
+                                                        international music critics – Diapason “5” Award and nomination for Fryderyk
+                                                        Award, and his renditions of Prokofiev’s and Rachmaninov’s Sonatas are
+                                                        compared by critics to legendary recordings by Sviatoslav Richter or Emil
+                                                        Gilels.
+                                                        He teaches piano at the Fryderyk Chopin University of Music in Warsaw. His
+                                                        students are laureates or semifinalists at the international piano competitions,
+                                                        such as Busoni, Warsaw Chopin Competition, San Marino, Hannover Chopin
+                                                        Competition, or Yamaha Scholarship to name just a few.
+                                                        He gives masterclasses all around the world. Apart from that he also served as a
+                                                        jury member of international piano competitions.
+                                                        The artist is interested in painting, poetry, psychology and philosophy.</p>
+                                  </div>
+                                  <div id="recommendations_id" class="carousel-item">
+                                        <p class="text-muted text-center">RECOMMENDATIONS</p>  
+                                        <blockquote id="about_me_2" class="blockquote">
+                                                <p> We would like to recommend one of the most talented Polish pianists, Mr. Konrad Skolarski, born in Warsaw, in 1980.
+                                                        The pianist is known for his extraordinary technique and recognizable own style of interpretations, as well as for interesting and sophisticated piano repertoire. 
+                                                        Recently he has performed the Polish premiere of Rodion Shchedtrin 1st Piano concerto with the National Polish Radio Symphony Orchestra in Katowice under the baton of Alexander Humala.
+                                                        In 2017 Konrad Skolarski gave recitals and masterclass in Buenos Aires, receiving enthusiastic reviews. In November 2017 Mr. Skolarski gave very successful tour in the United States, performing
+                                                        recitals in New York and Buffalo, as well as the 2nd Chopin piano concerto with Buffalo Philharmonic Orchestra under the baton of Maestra JoAnn Falletta.
+                                                        His performance of Chopin 2nd concerto there was acclaimed a "revelation" and a "hit" and was included in the CD of Buffalo Philharmonic Orchestra.
+                                                        
+                                                        Konrad Skolarski has been a student of world-famous pianist and pedagogue, Prof. Pavel Gililov, who says about the artists:
+                                                        "It is very seldom to hear a musician who can conjure up such lush, singing and richly shaded sound. (...)His lyrical-dramatic interpretations are very personal and one will remember and recognize them even from thousand other pianists."
+                                                        Mr. Skolarski has been also a student of legendary Prof. Peter Feuchtwanger in London, who has worked with many distinguished pianists, including Martha Argerich, Nelson Freire or Shura Cherkassky.
+                                                        In 2012 his solo CD with Rachmaninov, Scriabin and Prokofiew was awarded by the international music critics - Diapason "5" Award.
+                                                        Konrad Skolarski gave concerts in Germany (Klavierfestival Ruhr), Czech Republic, Spain, Serbia, Belgium, Switzerland, Turkey, Argentina, United States of America, Great Britain, Japan. After his recital at the 20th Ludwig van Beethoven Easter Festival in Warsaw MDR
+                                                        Figaro said: "He sounds like young Sviatoslav Richter". 
+                                                        We highly recommend Mr. Konrad Skolarski as a concert pianist.
+                                                    </p>
+                                                <footer class="blockquote-footer text-center">Elżbieta Penderecki, Krzysztof Penderecki</footer>
+                                            </blockquote>
+                                            <div class="text-center pt-2"><button type="button" class="btn btn-dark ">READ MORE</button></div>
+                                  </div>
+                                  <div id="reviews_id" class="carousel-item">
+                                        <p class="text-muted text-center">SELECTED REVIEWS</p>  
+                                        <blockquote id="about_me_3" class="blockquote text-justify">
+                                                <p> Polish pianist Konrad Skolarski (b. 1980) is a prizewinner in several international competitions and a former student of Pavel Gililov and Olga Rusina. His first CD, issued in 2005 on the Universal Poland label, was a collection of works by Chopin, Liszt, Rachmaninov and Prokofiev. If I can judge by the performances on this new CD on the Dux label, I would say Skolarski may well have a major career on the concert stage.
+                                                        The version of the Rachmaninov Second Sonata that Skolarski chooses is the original, from 1913, and while it is always good to have a fine recording of it, the revised rendition (1931) is the better of the two. The earlier version is seven or eight minutes longer and sometimes seems a bit padded with dispensable diversions. At any rate, both versions are worthy of attention, and this account of the original is excellent. Van Cliburn's scorching 1960 recording of it has been a benchmark, but now Skolarski, with a more lush and relaxed approach, offers nearly as compelling a performance, and in much better sound. Where Cliburn turns in a white-heat rendition in terrible sound reproduction from a live Moscow performance, Skolarski lets the lyrical sections gush with passion and rich Romanticism, the whole captured in excellent sonics by Dux engineers. Skolarski plays the faster music well too, and overall shows he has the full measure of this challenging work.
+                                                        In the three preludes from Op. 23 he is equally convincing. In #3 Skolarski's tempos are centrist and he tends to balance both a stately and melancholy sense to offer a splendid rendition of this fine piece. In #6 he phrases the music with senstivity in rich tones to deliver a meltingly beautiful account, while in #8 he turns up the passion with a restlessness in the accompanying runs, deftly imparting a youthful sort of longing. In the Elegy, #1 from the Op. 3 Morceaux de Fantasie, Skolarski paces the music very deliberately and comes across a little stiffly. Other pianists have offered more supple accounts, though Skolarski's effort here does effectively point up the darker, sadder elements here.
+                                                        The Scriabin Op. 28 Fantasy in B minor is filled with passion as Skolarski points up the Romantic side of the music. Some might complain his dynamics are tilted a bit to the loud side, but he makes a good case for his more epic approach.
+                                                        Skolarski's Prokofiev Second Sonata is well thought out, featuring wide-ranging dynamics and much subtle nuancing. Notice how his buildup in the first movement begins deliberately and with considerable restraint, and then so powerfully explodes at the climax. He adroitly conveys the humor and menace in the Scherzo, and his third movement Andante effectively captures the dark hypnotic character of the music while bringing out inner voices from the bass often suppressed in other performances. His finale is fleet, light and crisp, catching all the Prokofiev menace and wit to yield one of the finest accounts of this movement ever recorded. True, Skolarski sometimes tends to accent certain notes without sufficent purpose, but overall he is still very effective. While there have been excellent renditions of this work by Richter, Graffman, Glemser, Raekallio, Douglas and others, this one by Skolarski is a strong competitor with them. Again, the sound reproduction here and throughout the disc is first-rate. This is a splendidly played collection that should appeal to those with an interest in late 19th- and early 20th-century piano music.
+                                                    </p>
+                                                <footer class="blockquote-footer text-center">Robert Cummings,<cite title="Source Title"> classical.net @ 2013</cite></footer>
+                                        </blockquote>
+                                        <div class="text-center pt-2"><button type="button" class="btn btn-dark ">READ MORE</button></div>      
+                                  </div>
+                                  <div id="texts_id" class="carousel-item">
+                                        <p class="text-muted text-center">TEXTS</p>  
+                                        <blockquote id="about_me_4 " class="blockquote text-center">
+                                                <h4>"Technique".</h4>
+                                                <h5>(extract from the river interview with Peter Feuchtwanger. The book will be published soon)</h5>
+                                                <p> K.S.  (…)Basically, all about the so called technique has been said. All solutions to technical problems lie in musical content. I hope it's obvious by now. Nevertheless, we can say a bit more—especially for those readers who don't see any relation between what is hidden between the notes and technique in the common sense. I came across views that the things we discussed earlier are “loftier matters”, things one should deal with at a later stage in one's education. Many pedagogues are of the opinion one should first handle the craft, the technique. The tone, the phrase, the form and finally the spirit of the music become matters the student works on first during his studies. This view results in an overemphasis of the means at the cost of the goals, and it is the goals that should determine the means. Let's quote Neuhaus' maxim again: what defines how. The essence of art and science is not the method, the apparatus, the tool. Technique and brilliance are not an equivalent of creativity. Somebody who separates the technical and the musical elements reminds of the individual described by Freud who spent all his time cleaning his glasses instead of putting them on and looking at the world. (…)Heinrich Neuhaus explains the etymology of the word technique (saying it originates from the Greek word ?????, which means art). In my opinion it is a huge simplification. Such a literal translation does not cover the whole problem. The philosopher Martin Heidegger goes much deeper. Examining the content of the lecture, which he gave in 1953 in Münich, we realize that we cannot consider the word techne in isolation from words such as poiesis and thesis. Heidegger, after analyzing the correlations between the words techne, poiesis and thesis, concludes that in fact technique means revealing, evoking, bringing out of concealment into unconcealment. Heidegger once said that “art is the becoming and happening of truth”. So technique is about revealing, evoking, about poetic manifestation. 
+                                                </p>
+                                            </blockquote>
+                                            <div class="text-center pt-2"><button type="button" class="btn btn-dark ">READ MORE</button></div>
+                                  </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
                     
             </div>
         </div>
@@ -289,7 +287,7 @@
             <h2 class="section-title text-center pb-5">Gallery</h2>
             <div class="gallery-wrapper">
                     <div class="row">
-                        <div class="col-md-3 col-sm-12">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="gallery-image-wrapper" data-aos="fade-left">
                                         <a href="images/gallery/gallery_4.JPG" data-toggle="lightbox" data-gallery="example-gallery"  data-type="image">
                                             <div class="label-image-hover text-center">
@@ -300,7 +298,7 @@
                                          </a>
                                 </div>
                         </div>
-                        <div class="col-md-3 col-sm-12">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
                                 <div class="gallery-image-wrapper" data-aos="zoom-in">
                                         <a href="images/gallery/gallery_5.JPG" data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                                             <div class="label-image-hover text-center">
@@ -311,7 +309,7 @@
                                         </a>
                                     </div>
                         </div>
-                        <div class="col-md-3 col-sm-12">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
                                     <div class="gallery-image-wrapper" data-aos="zoom-in">
                                         <a href="images/gallery/gallery_2.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                                             <div class="label-image-hover text-center">
@@ -323,7 +321,7 @@
                                         </a>
                                     </div>
                         </div>
-                        <div class="col-md-3 col-sm-12">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
                                     <div class="gallery-image-wrapper" data-aos="fade-right">
                                         <a href="images/gallery/gallery_7.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                                             <div class="label-image-hover text-center">
@@ -336,7 +334,7 @@
                         </div>
                     </div>
                     <div class="row">
-                            <div class="col-md-3 col-sm-12"> 
+                            <div class="col-lg-3 col-md-6 col-sm-12"> 
                                     <div class="gallery-image-wrapper" data-aos="fade-left">
                                             <a href="images/gallery/gallery_8.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                                                 <div class="label-image-hover text-center">
@@ -347,7 +345,7 @@
                                             </a>
                                         </div>
                             </div>
-                            <div class="col-md-3 col-sm-12">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
                                         <div class="gallery-image-wrapper" data-aos="zoom-in">
                                             <a href="images/gallery/gallery_9.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                                                 <div class="label-image-hover text-center">
@@ -358,7 +356,7 @@
                                              </a>
                                         </div>
                             </div>
-                            <div class="col-md-3 col-sm-12">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
                                         <div class="gallery-image-wrapper" data-aos="zoom-in">
                                             <a href="images/gallery/gallery_10.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                                                 <div class="label-image-hover text-center">
@@ -369,7 +367,7 @@
                                             </a>
                                         </div>
                             </div>
-                            <div class="col-md-3 col-sm-12">
+                            <div class="col-lg-3 col-md-6 col-sm-12">
                                         <div class="gallery-image-wrapper" data-aos="fade-right">
                                             <a href="images/gallery/gallery_11.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                                                 <div class="label-image-hover text-center">
@@ -385,7 +383,7 @@
                            
                     </div>
                     <div class="row">
-                        <div class="col-md-3 col-sm-12"> 
+                        <div class="col-lg-3 col-md-6 col-sm-12"> 
                                 <div class="gallery-image-wrapper" data-aos="fade-left">
                                         <a href="images/gallery/gallery_8.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                                             <div class="label-image-hover text-center">
@@ -396,7 +394,7 @@
                                         </a>
                                     </div>
                         </div>
-                        <div class="col-md-3 col-sm-12"> 
+                        <div class="col-lg-3 col-md-6 col-sm-12"> 
                                     <div class="gallery-image-wrapper" data-aos="zoom-in">
                                         <a href="images/gallery/gallery_9.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                                             <div class="label-image-hover text-center">
@@ -407,7 +405,7 @@
                                          </a>
                                     </div>
                         </div>
-                        <div class="col-md-3 col-sm-12"> 
+                        <div class="col-lg-3 col-md-6 col-sm-12"> 
                                     <div class="gallery-image-wrapper" data-aos="zoom-in">
                                         <a href="images/gallery/gallery_10.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                                             <div class="label-image-hover text-center">
@@ -418,7 +416,7 @@
                                         </a>
                                     </div>
                         </div>
-                        <div class="col-md-3 col-sm-12"> 
+                        <div class="col-lg-3 col-md-6 col-sm-12"> 
                                     <div class="gallery-image-wrapper" data-aos="fade-right">
                                         <a href="images/gallery/gallery_11.jpg" data-toggle="lightbox" data-gallery="example-gallery" data-type="image">
                                             <div class="label-image-hover text-center">
